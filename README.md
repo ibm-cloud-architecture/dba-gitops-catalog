@@ -1,9 +1,32 @@
 # Digital Business Automation Solution gitOps catalog
 
-The GitOps Catalog includes kustomize bases and overlays for a number of OpenShift operators needed
+The GitOps Catalog includes [kustomize](http://kustomize.io) bases and overlays folders for a number of OpenShift operators needed
 to develop Digital Business Automation solution and services.
 
-This is using the same structure as introduce by Red Hat COP team in [this repository](https://github.com/redhat-cop/gitops-catalog).
+This project is using the same structure as introduce by Red Hat COP team in [this repository](https://github.com/redhat-cop/gitops-catalog).
+
+## Pre-requisites
+
+### Red Hat OpenShift cluster 
+- An OpenShift v4.7+ cluster is required. 
+
+### IBM Entitlement Key
+
+The IBM Entitlement Key is required to pull IBM Cloud Pak specific container images from the IBM Entitled Registry. To get an entitlement key,
+
+* Log in to MyIBM Container Software Library with an IBMid and password associated with the entitled software.
+
+    1. Select the View library option to verify your entitlement(s).
+    1. Select the Get entitlement key to retrieve the key.
+    1. A Secret containing the entitlement key is created in the tools namespace.
+
+        ```sh
+        oc new-project tools || true
+        oc create secret docker-registry ibm-entitlement-key -n tools \
+        --docker-username=cp \
+        --docker-password="<entitlement_key>" \
+        --docker-server=cp.icr.io
+        ```
 
 ## Usage
 
