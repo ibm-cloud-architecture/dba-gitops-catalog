@@ -4,7 +4,7 @@ metadata:
   name: ibm-automation
   namespace: openshift-operators
 spec:
-  channel: v1.1
+  channel: v1.0
   config:
     resources: {}
   installPlanApproval: Automatic

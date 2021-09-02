@@ -30,12 +30,11 @@ The IBM Entitlement Key is required to pull IBM Cloud Pak specific container ima
 
 ## Usage
 
-Each catalog item has its own README.md for future instructions. Be sure to use the most recent `oc` CLI.
-
-See the download page [here](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/).
+Each catalog item has its own README.md for future instructions. Be sure to use the most recent `oc` CLI, 
+see the OpenShift oc download page [here](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/).
 
 ```sh
-git clone https://github.com/jbcodeforce/dba-gitops-catalog.git
+git clone https://github.com/ibm-cloud-architecture/dba-gitops-catalog.git
 ```
 
 Then apply on one of the defined product or operator.
@@ -52,7 +51,7 @@ kind: Kustomization
 namespace: product-catalog-cicd
 
 resources:
-- github.com/jbcodeforce/dba-gitops-catalog/kafka-strimzi/operator/base/?ref=main
+- github.com/ibm-cloud-architecture/dba-gitops-catalog/ibm-automation/operator/base/?ref=main
 ```
 
 This enables you to patch these resources for your specific environments. 
