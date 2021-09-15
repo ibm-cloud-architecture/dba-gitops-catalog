@@ -7,6 +7,6 @@ spec:
   channel: stable
   installPlanApproval: Automatic
   name: cloud-native-postgresql
-  source: certified-operators
+  source: ibm-operator-catalog
   sourceNamespace: openshift-marketplace
-  startingCSV: cloud-native-postgresql.v1.7.1
+  startingCSV: cloud-native-postgresql.v1.6.0
