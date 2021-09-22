@@ -18,5 +18,5 @@ oc apply -k openshift-gitops-operator/overlays/<channel>
 Or, without cloning:
 
 ```
-oc apply -k https://github.com/jbcodeforce/eda-gitops-catalog/openshift-gitops-operator/overlays/<channel>
+oc apply -k https://github.com/ibm-cloud-architecture/eda-gitops-catalog/openshift-gitops-operator/overlays/<channel>
 ```
