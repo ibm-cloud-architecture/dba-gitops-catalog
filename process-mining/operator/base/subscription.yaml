@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: ibm-automation-processmining
+spec:
+  channel: v1.0
+  installPlanApproval: Automatic
+  name: ibm-automation-processmining
+  source: ibm-automation-processminings
+  sourceNamespace: openshift-marketplace
+  startingCSV: ibm-automation-processmining.v1.0.2
