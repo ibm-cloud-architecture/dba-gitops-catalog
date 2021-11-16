@@ -2,287 +2,278 @@
 
 ## Environment
 
-1. Append OpenShift public key to ~/.ssh/authorized_keys
+1. Append local public key to server ~/.ssh/authorized_keys
 
-echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQClX0z0g3O+QdSnsKabymg13ZWbdcb9jepVJi7pQ4BI4+62/F5LBWHHu3+EmpL9aJOJLEonVmjGw2y6sbvnRR1S34yC96NtxC5kTcq4C8lrFJgXN1qDVzfcfW23ZmJvgUsQqICZDdkMeNBNamEVXdwlDEE
-2KU8sOKMZVpHEX8XCIhbQKFnf2LMJVtQsBPtiadOypqVaZrKTIJLnSHFa8VO7r+MbC6kbV4RStIi/iOnCEVF8za4ErxhXXuTpiIQGxx7J57W2jSXlxWs5V5aogYN8qwRPyai6T97HuzvBACdTvOwV0HX4ejHsKeSeU3CsImqYiLyRmWmdYdmUs7CHUXId tudorchiribes@
-Tudors-MacBook-Pro.local' >> ~/.ssh/authorized_keys
+  ```sh
+  cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+  ```
 
-1. Install tmux, podman, httpd-tools, unzip on your workstation if not already there
+2. Install tmux, podman, httpd-tools, unzip on your workstation if not already there
 
-1. Create htpasswd user credentials, secret, add identity provider
+3. Create htpasswd credentials file, secret
 
-    ```sh
-    htpasswd -c -B -b users.htpasswd tudor asuperpassword
+  ```sh
+  htpasswd -c -B -b users.htpasswd OPENSHIFT_USER OPENSHIFT_USER_PASSWORD
 
-    oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n openshift-config
-    ```
+  oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n openshift-config
+  ```
 
-1. Create a `identityProvider.yaml`
+4. Add identity provider to OpenShift
 
-    ```yaml
-    apiVersion: config.openshift.io/v1
-    kind: OAuth
-    metadata:
-    name: cluster
-    spec:
-    identityProviders:
-    - name: local
-        mappingMethod: claim
-        type: HTPasswd
-        htpasswd:
-        fileData:
-            name: htpass-secret
-    ```
+  Create yaml file:
+
+  ```yaml
+  apiVersion: config.openshift.io/v1
+  kind: OAuth
+  metadata:
+  name: cluster
+  spec:
+  identityProviders:
+  - name: local
+      mappingMethod: claim
+      type: HTPasswd
+      htpasswd:
+      fileData:
+          name: htpass-secret
+  ```
    
    Then do: 
 
-   ```sh
-    oc apply -f identityProvider.yaml
-    oc adm policy add-cluster-role-to-user cluster-admin tudor
-    ```
+  ```sh
+  oc apply -f identityProvider.yaml
+  oc adm policy add-cluster-role-to-user cluster-admin OPENSHIFT_USER
+  ```
 
-1. Add nfs folder to exports, get and configure provisioner, create storage class
+5. Add nfs folder to exports, get and configure provisioner, create storage class
 
-    ```sh
-    systemctl status nfs-server
+  ```sh
+  systemctl status nfs-server
 
-    mkdir -p /ifs/kubernetes
-    chmod -R 777 /ifs/kubernetes
-    echo '/ifs/kubernetes  *(rw,sync,no_subtree_check,no_root_squash,insecure)' >> /etc/exports
-    sudo exportfs -rv
-    showmount -e
+  mkdir -p /ifs/kubernetes
+  chmod -R 777 /ifs/kubernetes
+  echo '/ifs/kubernetes  *(rw,sync,no_subtree_check,no_root_squash,insecure)' >> /etc/exports
+  sudo exportfs -rv
+  showmount -e
 
-    wget https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/archive/refs/heads/master.zip
+  wget https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/archive/refs/heads/master.zip
 
-    oc adm policy add-scc-to-user hostmount-anyuid system:serviceaccount:default:nfs-client-provisioner
+  oc adm policy add-scc-to-user hostmount-anyuid system:serviceaccount:default:nfs-client-provisioner
 
-    oc apply -f nfs-subdir-external-provisioner-master/deploy/rbac.yaml
-    
-    ip a
+  oc apply -f nfs-subdir-external-provisioner-master/deploy/rbac.yaml
+  
+  ip a
 
-    vi nfs-subdir-external-provisioner-master/deploy/deployment.yaml
+  vi nfs-subdir-external-provisioner-master/deploy/deployment.yaml
 
-    oc apply -f nfs-subdir-external-provisioner-master/deploy/deployment.yaml
+  oc apply -f nfs-subdir-external-provisioner-master/deploy/deployment.yaml
 
-    oc apply -f nfs-subdir-external-provisioner-master/deploy/class.yaml
-    ```
+  oc apply -f nfs-subdir-external-provisioner-master/deploy/class.yaml
+  ```
 
 ## Cluster setup
 
 1. Get Cloud Pak resources, run cluster setup script
 
-wget https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/3.1.3/ibm-cp-automation-3.1.3.tgz
+  ```sh
+  wget https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/3.1.3/ibm-cp-automation-3.1.3.tgz
 
-tar xvf ./ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-21.0.2.tar
+  tar xvf ./ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-21.0.2.tar
 
-oc new-project cp4ba
+  oc new-project cp4ba
 
-./cert-kubernetes/scripts/cp4a-clusteradmin-setup.sh
+  ./cert-kubernetes/scripts/cp4a-clusteradmin-setup.sh
+  ```
 
-**Configure dependencies**
+## Configure dependencies
 
 1. Create LDAP secret, OpenLDAP deployment and a service
 
-    ```sh
-    oc create secret generic openldap --from-literal=adminpassword=adminpassword --from-literal=users=user01,user02,cpadmin --from-literal=passwords=password01,password02,password
-    ```
+  ```sh
+  oc create secret generic openldap --from-literal=adminpassword=adminpassword --from-literal=users=user01,user02,cpadmin --from-literal=passwords=password01,password02,password
+  ```
 
-    ```yaml
-    apiVersion:  apps/v1
-    kind: Deployment
-    metadata:
-    name: openldap
-    labels:
-        app.kubernetes.io/name: openldap
-    spec:
-    selector:
-        matchLabels:
-        app.kubernetes.io/name: openldap
-    replicas: 1
-    template:
-        metadata:
-        labels:
-            app.kubernetes.io/name: openldap
-        spec:
-        containers:
-            - name: openldap
-            image: docker.io/bitnami/openldap:latest
-            imagePullPolicy: "Always"
-            env:
-                - name: LDAP_ADMIN_USERNAME
-                  value: "admin"
-                - name: LDAP_ADMIN_PASSWORD
-                  valueFrom:
-                    secretKeyRef:
-                    key: adminpassword
-                    name: openldap
-                - name: LDAP_USERS
-                  valueFrom:
-                    secretKeyRef:
-                    key: users
-                    name: openldap
-                - name: LDAP_PASSWORDS
-                  valueFrom:
-                    secretKeyRef:
-                    key: passwords
-                    name: openldap
-            ports:
-                - name: tcp-ldap
-                  containerPort: 1389
+  ```yaml
+  apiVersion:  apps/v1
+  kind: Deployment
+  metadata:
+  name: openldap
+  labels:
+      app.kubernetes.io/name: openldap
+  spec:
+  selector:
+      matchLabels:
+      app.kubernetes.io/name: openldap
+  replicas: 1
+  template:
+      metadata:
+      labels:
+          app.kubernetes.io/name: openldap
+      spec:
+      containers:
+          - name: openldap
+          image: docker.io/bitnami/openldap:latest
+          imagePullPolicy: "Always"
+          env:
+              - name: LDAP_ADMIN_USERNAME
+                value: "admin"
+              - name: LDAP_ADMIN_PASSWORD
+                valueFrom:
+                  secretKeyRef:
+                  key: adminpassword
+                  name: openldap
+              - name: LDAP_USERS
+                valueFrom:
+                  secretKeyRef:
+                  key: users
+                  name: openldap
+              - name: LDAP_PASSWORDS
+                valueFrom:
+                  secretKeyRef:
+                  key: passwords
+                  name: openldap
+          ports:
+              - name: tcp-ldap
+                containerPort: 1389
+  ```
 
-    ```
+  ```yaml
+  apiVersion: v1
+  kind: Service
+  metadata:
+  name: openldap
+  labels:
+      app.kubernetes.io/name: openldap
+  spec:
+  type: ClusterIP
+  ports:
+      - name: tcp-ldap
+      port: 1389
+      targetPort: tcp-ldap
+  selector:
+      app.kubernetes.io/name: openldap
+  ```
 
-    ```yaml
-    apiVersion: v1
-    kind: Service
-    metadata:
-    name: openldap
-    labels:
-        app.kubernetes.io/name: openldap
-    spec:
-    type: ClusterIP
-    ports:
-        - name: tcp-ldap
-        port: 1389
-        targetPort: tcp-ldap
-    selector:
-        app.kubernetes.io/name: openldap
-    ```
+  Test it:
 
-    Test it
+  ```sh
+  oc rsh $(oc get po -o name | grep ldap)
 
-    ```sh
-    ldapsearch -x -H ldap://172.30.146.33:1389 dc=example,dc=org -D "cn=admin,dc=example,dc=org" -w adminpassword
-    ```
+  ldapsearch -x -H ldap://localhost:1389 dc=example,dc=org -D "cn=admin,dc=example,dc=org" -w adminpassword
+  ```
 
-## Databases
+2. Download JDBC drivers to operator pod, create super user
 
-### Drivers
+  ```sh
+  oc rsh $(oc get po -o name | grep 'cp4a-operator')
+  mkdir /opt/ansible/share/jdbc/postgresql -p && cd "$_"
 
-    ```sh
-    oc rsh ibm-cp4a-operator-854ff5c5fc-5wwjk
-    mkdir /opt/ansible/share/jdbc/postgresql -p
+  curl https://jdbc.postgresql.org/download/postgresql-42.3.0.jar -O
+  ```
 
-    oc cp tudor/postgresql-42.3.0.jar ibm-cp4a-operator-854ff5c5fc-5wwjk:/opt/ansible/share/jdbc/postgresql
+3. Open remote shell to database pod and create super user
 
-    oc rsh pgsql-cluster-1
+  ```sh
+  oc rsh DATABASE_POD_NAME
+  psql -U postgres
+  ```
 
-    psql -U postgres
+  ```SQL
+  CREATE ROLE cpadmin PASSWORD 'password' SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
+  ```
 
-    CREATE ROLE cpadmin PASSWORD 'password' SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
+3. Create UMS database
 
-    ```
+  ```SQL
+  CREATE DATABASE umsdb OWNER cpadmin TEMPLATE template0 ENCODING UTF8;
 
- Validate
+  GRANT ALL PRIVILEGES ON DATABASE umsdb TO cpadmin;
+  ```
 
-    ```sh
-    postgres=# \dg
-                                        List of roles
-        Role name     |                         Attributes                         | Member of
-    -------------------+------------------------------------------------------------+-----------
-    app               |                                                            | {}
-    cpadmin           | Superuser, Create role, Create DB                          | {}
-    postgres          | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
-    streaming_replica | Replication                                                | {}
-    ```
+4. Create ICN/BAN database
 
-### UMS
+  ```SQL
+  CREATE DATABASE os1db OWNER cpadmin TEMPLATE template0 ENCODING UTF8;
 
-```SQL
-CREATE DATABASE umsdb OWNER cpadmin TEMPLATE template0 ENCODING UTF8;
+  REVOKE CONNECT ON DATABASE os1db FROM public;
 
-GRANT ALL PRIVILEGES ON DATABASE umsdb TO cpadmin;
+  GRANT all privileges ON DATABASE os1db TO cpadmin;
 
-***Application engine/Playback Server:***
+  GRANT connect, temp, create ON DATABASE os1db TO cpadmin;
 
-create user APP_ENGINE_DB_USER_NAME with password 'APP_ENGINE_DB_PASSWORD';
+  CREATE TABLESPACE os1db_tbs OWNER cpadmin LOCATION '/var/lib/postgresql/data/pgdata';
 
-CREATE DATABASE appengdb OWNER cpadmin TEMPLATE template0 ENCODING UTF8;
+  GRANT CREATE ON TABLESPACE os1db_tbs TO cpadmin;
+  ```
 
-GRANT ALL privileges ON DATABASE appengdb TO cpadmin;
-```
+5. Create Playback Server Engine database
 
-### BAS
+  ```SQL
+  CREATE USER aeadmin WITH PASSWORD 'password';
 
-```SQL
-CREATE DATABASE basdb WITH OWNER cpadmin TEMPLATE template0 ENCODING UTF8;
+  CREATE DATABASE appengdb OWNER aeadmin TEMPLATE template0 ENCODING UTF8;
 
-GRANT ALL privileges ON DATABASE basdb TO cpadmin;
+  GRANT ALL privileges ON DATABASE appengdb TO aeadmin;
+  ```
 
-\c basdb
+6. Create BAS database
 
-SET ROLE cpadmin;
+  ```SQL
+  CREATE ROLE basadmin PASSWORD 'password' SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
 
-CREATE SCHEMA IF NOT EXISTS cpadmin AUTHORIZATION cpadmin;
-```
+  CREATE DATABASE basdb WITH OWNER basadmin TEMPLATE template0 ENCODING UTF8;
 
-### ICN/BAI
+  GRANT ALL privileges ON DATABASE basdb TO basadmin;
 
-```SQL
-CREATE DATABASE os1db OWNER cpadmin TEMPLATE template0 ENCODING UTF8;
+  \c basdb
 
-revoke connect on database os1db from public;
+  SET ROLE basadmin;
 
-grant all privileges on database os1db to cpadmin;
+  CREATE SCHEMA IF NOT EXISTS basadmin AUTHORIZATION basadmin;
+  ```
 
-grant connect, temp, create on database os1db to cpadmin;
+## Create secrets:
 
-CREATE TABLESPACE os1db_tbs OWNER cpadmin LOCATION '/var/lib/postgresql/data/pgdata';
+1. UMS
 
-grant create on tablespace os1db_tbs to cpadmin;
-```
+  ```yaml
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: ibm-dba-ums-secret
+  type: Opaque
+  stringData:
+    adminUser: "umsadmin"
+    adminPassword: "password"
+    oauthDBUser: "cpadmin"
+    oauthDBPassword: "password"
+    tsDBUser: "cpadmin"
+    tsDBPassword: "password"
+  ```
 
-### Validation
+2. Playback Server Engine
 
-```
-psql -U cpadmin -d basdb -h localhost
-```
+  ```yaml
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: playback-server-admin-secret
+  type: Opaque
+  stringData:
+    AE_DATABASE_USER: "aeadmin"
+    AE_DATABASE_PWD: "password"
+  ```
 
-* Create secret for LDAP, UMS, BAS and Playback Server
-
-```
-oc create secret generic ldap-bind-secret --from-literal=ldapUsername="cn=admin,dc=example,dc=org" --from-literal=ldapPassword="adminpassword"
-```
-
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-  name: ibm-dba-ums-secret
-type: Opaque
-stringData:
-  adminUser: "umsadmin"
-  adminPassword: "password"
-  oauthDBUser: "cpadmin"
-  oauthDBPassword: "password"
-  tsDBUser: "cpadmin"
-  tsDBPassword: "password"
-
-apiVersion: v1
-kind: Secret
-metadata:
-  name: icp4adeploy-bas-admin-secret
-type: Opaque
-stringData:
-    dbUsername: "cpadmin"
-    dbPassword: "password"
-
-apiVersion: v1
-kind: Secret
-metadata:
-  name: playback-server-admin-secret
-type: Opaque
-stringData:
-  AE_DATABASE_USER: "cpadmin"
-  AE_DATABASE_PWD: "password"
-```
-
-**Custom resource:**
-
-1. Patterns
-2. Capabilities
-2. Sizing considerations
+3. BAS
+  ```yaml
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: icp4adeploy-bas-admin-secret
+  type: Opaque
+  stringData:
+      dbUsername: "basadmin"
+      dbPassword: "password"
+  ```
 
 ## Appendix
 
@@ -318,7 +309,7 @@ setup-job                  1/1           7s         115s
 
 ## Bibliography:
 
-Pre-work:
+*Preparing:*
 
 Resources: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-preparing-enterprise-deployment
 
@@ -332,21 +323,22 @@ UMS DB: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=da
 
 BAN DB: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=navigator-preparing-database
 
-BAS/AppEngPS DB: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=databases-creating-postgresql-database
+BAS/Playback Server Engine DB: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=databases-creating-postgresql-database
 
 Secrets: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=authoring-creating-secrets-protect-sensitive-configuration-data
 
-
-Configuration/Parameters:
+*Configuration:*
 
 UMS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=resource-configuring-user-management-services
 
-UMS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-ums
-
 BAS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=resource-configuring-business-automation-studio
 
-BAS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-business-automation-studio
-
 ADS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=resource-configuring-automation-decision-services
+
+*Parameters*:
+
+UMS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-ums
+
+BAS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-business-automation-studio
 
 ADS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-automation-decision-services
