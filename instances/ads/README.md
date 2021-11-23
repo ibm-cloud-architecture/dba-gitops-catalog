@@ -1,50 +1,11 @@
 # Deploy ADS to OpenShift
 
+This note is for ADS deployment specifically. See main readme for environment setup.
+
 ## Environment
 
-1. Append local public key to server ~/.ssh/authorized_keys
 
-  ```sh
-  cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-  ```
-
-2. Install tmux, podman, httpd-tools, unzip on your workstation if not already there
-
-3. Create htpasswd credentials file, secret
-
-  ```sh
-  htpasswd -c -B -b users.htpasswd OPENSHIFT_USER OPENSHIFT_USER_PASSWORD
-
-  oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n openshift-config
-  ```
-
-4. Add identity provider to OpenShift
-
-  Create yaml file:
-
-  ```yaml
-  apiVersion: config.openshift.io/v1
-  kind: OAuth
-  metadata:
-  name: cluster
-  spec:
-  identityProviders:
-  - name: local
-      mappingMethod: claim
-      type: HTPasswd
-      htpasswd:
-      fileData:
-          name: htpass-secret
-  ```
-   
-   Then do: 
-
-  ```sh
-  oc apply -f identityProvider.yaml
-  oc adm policy add-cluster-role-to-user cluster-admin OPENSHIFT_USER
-  ```
-
-5. Add nfs folder to exports, get and configure provisioner, create storage class
+5. On Fyre NFS is preconfigure Add nfs folder to exports, get and configure provisioner, create storage class
 
   ```sh
   systemctl status nfs-server
@@ -72,94 +33,12 @@
 
 ## Cluster setup
 
-1. Get Cloud Pak resources, run cluster setup script
+We can have only one instance of Cloud pak automation on one cluster
 
-  ```sh
-  wget https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/3.1.3/ibm-cp-automation-3.1.3.tgz
-
-  tar xvf ./ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-k8s-21.0.2.tar
-
-  oc new-project cp4ba
-
-  ./cert-kubernetes/scripts/cp4a-clusteradmin-setup.sh
-  ```
 
 ## Configure dependencies
 
-1. Create LDAP secret, OpenLDAP deployment and a service
 
-  ```sh
-  oc create secret generic openldap --from-literal=adminpassword=adminpassword --from-literal=users=user01,user02,cpadmin --from-literal=passwords=password01,password02,password
-  ```
-
-  ```yaml
-  apiVersion:  apps/v1
-  kind: Deployment
-  metadata:
-  name: openldap
-  labels:
-      app.kubernetes.io/name: openldap
-  spec:
-  selector:
-      matchLabels:
-      app.kubernetes.io/name: openldap
-  replicas: 1
-  template:
-      metadata:
-      labels:
-          app.kubernetes.io/name: openldap
-      spec:
-      containers:
-          - name: openldap
-          image: docker.io/bitnami/openldap:latest
-          imagePullPolicy: "Always"
-          env:
-              - name: LDAP_ADMIN_USERNAME
-                value: "admin"
-              - name: LDAP_ADMIN_PASSWORD
-                valueFrom:
-                  secretKeyRef:
-                  key: adminpassword
-                  name: openldap
-              - name: LDAP_USERS
-                valueFrom:
-                  secretKeyRef:
-                  key: users
-                  name: openldap
-              - name: LDAP_PASSWORDS
-                valueFrom:
-                  secretKeyRef:
-                  key: passwords
-                  name: openldap
-          ports:
-              - name: tcp-ldap
-                containerPort: 1389
-  ```
-
-  ```yaml
-  apiVersion: v1
-  kind: Service
-  metadata:
-  name: openldap
-  labels:
-      app.kubernetes.io/name: openldap
-  spec:
-  type: ClusterIP
-  ports:
-      - name: tcp-ldap
-      port: 1389
-      targetPort: tcp-ldap
-  selector:
-      app.kubernetes.io/name: openldap
-  ```
-
-  Test it:
-
-  ```sh
-  oc rsh $(oc get po -o name | grep ldap)
-
-  ldapsearch -x -H ldap://localhost:1389 dc=example,dc=org -D "cn=admin,dc=example,dc=org" -w adminpassword
-  ```
 
 2. Download JDBC drivers to operator pod, create super user
 
