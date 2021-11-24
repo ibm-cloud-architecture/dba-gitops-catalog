@@ -1,0 +1,40 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: null
+  name: odm-argo-app
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  ignoreDifferences:
+  - group: argoproj.io
+    jsonPointers:
+    - /status
+    kind: Application
+  - group: triggers.tekton.dev
+    jsonPointers:
+    - /status
+    kind: EventListener
+  - group: triggers.tekton.dev
+    jsonPointers:
+    - /status
+    kind: TriggerTemplate
+  - group: triggers.tekton.dev
+    jsonPointers:
+    - /status
+    kind: TriggerBinding
+  - group: route.openshift.io
+    jsonPointers:
+    - /spec/host
+    kind: Route
+  project: odm
+  source:
+    path: config/argocd/odm
+    repoURL: https://github.com/ibm-cloud-architecture/dba-gitops-catalog.git
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+

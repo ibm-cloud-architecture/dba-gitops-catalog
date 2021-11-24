@@ -1,0 +1,35 @@
+apiVersion: postgresql.k8s.enterprisedb.io/v1
+kind: Cluster
+metadata:
+  name: ps-cluster
+  namespace: postgresql
+spec:
+  logLevel: info
+  resources: {}
+  imageName: 'quay.io/enterprisedb/postgresql:14.0'
+  enableSuperuserAccess: false
+  affinity:
+    podAntiAffinityType: preferred
+    topologyKey: ''
+  bootstrap:
+    initdb:
+      database: app
+      owner: app
+  postgresql:
+    parameters:
+      log_truncate_on_rotation: 'false'
+      log_filename: postgres
+      max_replication_slots: '32'
+      log_rotation_size: '0'
+      shared_preload_libraries: ''
+      logging_collector: 'on'
+      log_directory: /controller/log
+      log_destination: csvlog
+      max_worker_processes: '32'
+      max_parallel_workers: '32'
+      log_rotation_age: '0'
+      wal_keep_size: 512MB
+  storage:
+    size: 1Gi
+  primaryUpdateStrategy: unsupervised
+  instances: 3

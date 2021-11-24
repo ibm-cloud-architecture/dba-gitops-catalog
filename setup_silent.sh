@@ -10,9 +10,6 @@ oc create secret generic htpass-secret --from-file=htpasswd=./users.htpasswd -n 
 oc apply -f bootstrap/identityProvider.yaml
 oc adm policy add-cluster-role-to-user cluster-admin $CP4BA_AUTO_CLUSTER_USER
 
-echo "##### 2- Deploy LDAP in openldap project"
-oc apply -k instances/openLDAP
-
 echo "##### 3- get automation configuration"
 curl -o ./assets/ibm-cp-automation-${SCRIPT_VERSION}.tgz -LJO https://github.com/IBM/cloud-pak/raw/master/repo/case/ibm-cp-automation/${SCRIPT_VERSION}/ibm-cp-automation-${SCRIPT_VERSION}.tgz
 tar -xvzf ./assets/ibm-cp-automation-${SCRIPT_VERSION}.tgz -C ./assets

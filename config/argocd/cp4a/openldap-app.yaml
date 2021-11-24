@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: null
+  name: openldap
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openldap
+    server: https://kubernetes.default.svc
+  project: cp4a
+  source:
+    path: environments/openLDAP/
+    repoURL: https://github.com/ibm-cloud-architecture/dba-gitops-catalog.git
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+

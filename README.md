@@ -82,9 +82,35 @@ The IBM Entitlement Key is required to pull IBM Cloud Pak specific container ima
     
 ## Usage
 
+The product documentation is proposing to use different scripts to install the different products. So next session
+is a summary of how to use those scripts with some added and adapted steps.
+
+### Deploy OpenLDAP
+
+Deploy an open ldap as active directory in a dedicated `openldap` namespace:
+
+```sh
+oc apply -k instances/openLDAP
+```
+
+### Deploy PostgreSQL
+
+* Deploy postgres operator to monitor all namespaces from `openshift-operators`
+
+```sh
+oc apply -k operators/cn-postgresql/overlays
+```
+
+* Deploy one cluster in its own namespace:
+
+```sh
+oc apply -k instances/postgresql/
+```
+
+
 ### silent setup
 
-The `setup_silent.sh` script is getting configuration and scripts from 
+The `setup_silent.sh` script in this repository,  is getting configuration and scripts from 
 the https://github.com/IBM/cloud-pak/ repository and deploys the foundation services to a ROKS cluster.
 
 * Modify the environment variables of the scripts to reflect your IAM user for ROKS
@@ -95,6 +121,13 @@ and the namespace to install the operators:
 
 * Add the entitlement key in the `./assets/entitlement_key.text` and enter the email address used 
 to generate the entitlement key in a file called `./assets/ibm_email.text`
+
+* run the setup silent script which will call the 
+
+```sh
+./setup_silent.sh
+```
+
 * Pods under cp4ba namespace
 
 ```sh
@@ -128,6 +161,18 @@ oidcclient-watcher-846894d6d9-nl2vq                     1/1     Running     0   
 operand-deployment-lifecycle-manager-6c576c4d46-6k29k   1/1     Running     0          43m
 secret-watcher-64d4b58f4d-jvlkq                         1/1     Running     0          43m
 ```
+
+### Prepare operator for DB connection
+
+* Download JDBC drivers to the operator running pod:
+
+  ```sh
+  oc rsh $(oc get po -o name | grep 'cp4a-operator')
+  mkdir /opt/ansible/share/jdbc/postgresql -p && cd "$_"
+
+  curl https://jdbc.postgresql.org/download/postgresql-42.3.0.jar -O
+  ```
+
 
 ### Kustomize
 
@@ -173,3 +218,40 @@ resources:
 This enables you to patch these resources for your specific environments. 
 Note that none of these bases specify a namespace, in your kustomization overlay 
 you can include the specific namespace you want to install the tool into.
+
+
+## Bibliography:
+
+*Preparing:*
+
+Resources: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-preparing-enterprise-deployment
+
+Cluster: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=cluster-setting-up-by-running-script
+
+Capabilities: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=capabilities-enterprise-deployments
+
+LDAP: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-ldap-configuration
+
+UMS DB: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=database-preparing-postgresql
+
+BAN DB: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=navigator-preparing-database
+
+BAS/Playback Server Engine DB: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=databases-creating-postgresql-database
+
+Secrets: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=authoring-creating-secrets-protect-sensitive-configuration-data
+
+*Configuration:*
+
+UMS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=resource-configuring-user-management-services
+
+BAS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=resource-configuring-business-automation-studio
+
+ADS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=resource-configuring-automation-decision-services
+
+*Parameters*:
+
+UMS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-ums
+
+BAS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-business-automation-studio
+
+ADS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-automation-decision-services

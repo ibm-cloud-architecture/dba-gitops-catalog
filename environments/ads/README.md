@@ -33,21 +33,12 @@ This note is for ADS deployment specifically. See main readme for environment se
 
 ## Cluster setup
 
-We can have only one instance of Cloud pak automation on one cluster
+We can only have one instance of Cloud pak automation on one cluster
 
 
 ## Configure dependencies
 
 
-
-2. Download JDBC drivers to operator pod, create super user
-
-  ```sh
-  oc rsh $(oc get po -o name | grep 'cp4a-operator')
-  mkdir /opt/ansible/share/jdbc/postgresql -p && cd "$_"
-
-  curl https://jdbc.postgresql.org/download/postgresql-42.3.0.jar -O
-  ```
 
 3. Open remote shell to database pod and create super user
 
@@ -186,38 +177,3 @@ oidc-client-registration   0/1           46s        46s
 security-onboarding        0/1           48s        48s
 setup-job                  1/1           7s         115s
 
-## Bibliography:
-
-*Preparing:*
-
-Resources: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-preparing-enterprise-deployment
-
-Cluster: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=cluster-setting-up-by-running-script
-
-Capabilities: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=capabilities-enterprise-deployments
-
-LDAP: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-ldap-configuration
-
-UMS DB: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=database-preparing-postgresql
-
-BAN DB: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=navigator-preparing-database
-
-BAS/Playback Server Engine DB: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=databases-creating-postgresql-database
-
-Secrets: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=authoring-creating-secrets-protect-sensitive-configuration-data
-
-*Configuration:*
-
-UMS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=resource-configuring-user-management-services
-
-BAS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=resource-configuring-business-automation-studio
-
-ADS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=resource-configuring-automation-decision-services
-
-*Parameters*:
-
-UMS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-ums
-
-BAS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-business-automation-studio
-
-ADS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-automation-decision-services

@@ -1,0 +1,209 @@
+###############################################################################
+##
+##Licensed Materials - Property of IBM
+##
+##(C) Copyright IBM Corp. 2021. All Rights Reserved.
+##
+##US Government Users Restricted Rights - Use, duplication or
+##disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+##
+###############################################################################
+apiVersion: icp4a.ibm.com/v1
+kind: ICP4ACluster
+metadata:
+  name: icp4adeploy
+  labels:
+    app.kubernetes.io/instance: ibm-dba
+    app.kubernetes.io/managed-by: ibm-dba
+    app.kubernetes.io/name: ibm-dba
+    release: 21.0.2
+spec:
+  ## CP4A application version
+  appVersion: 21.0.2
+  ## MUST exist, used to accept ibm license, valid value only can be "accept" 
+  ibm_license: accept
+  #################################################################################################################
+  ##  The contents of this template CR file reflect only the specific parameters and configuration 
+  ##  settings applicable to the represented ICP4A capability. 
+  ##   
+  ##  These values/configuration sections are to be used when manually assembling or updating the main 
+  ##  ICP4A CR that is being applied in order to install an ICP4A environment. 
+  ##  
+  ##  If you are in the process of preparing a new install of an ICP4A environment, 
+  ##  you should merge the required values and configuration sections from this file into the   
+  ##  starting point CR template: ibm_cp4a_cr_enterprise_foundation.yaml available in the
+  ##  same location as this template. 
+  ##  
+  ##  If you updating an existing ICP4A environment, you should merge the required values and configuration
+  ##  sections from this template in the main ICP4A CR file already applied in the environment.  
+  ##  
+  ######################################################################################################################
+  shared_configuration:
+    ## FileNet Content Manager (FNCM) license and possible values are: user, non-production, and production.
+    ## This value could be different from the other licenses in the CR.
+    sc_deployment_fncm_license: "<Required>"
+    ## Business Automation Workflow (BAW) license and possible values are: user, non-production, and production.
+    ## This value could be different from the other licenses in the CR.
+    sc_deployment_baw_license: "<Required>"
+    ## Use this parameter to specify the license for the CP4A deployment and
+    ## the possible values are: non-production and production and if not set, the license will
+    ## be defaulted to production.  This value could be different from the other licenses in the CR.
+    sc_deployment_license: "<Required>"
+    ## All CP4A components must use/share the same docker image repository.  For example, if IBM Entitled Registry is used, then
+    ## it should be "cp.icr.io".  Otherwise, it will be a local docker registry.
+    sc_image_repository: cp.icr.io
+    ## All CP4A components must use/share the root_ca_secret in order for integration
+    root_ca_secret: icp4a-root-ca
+    ## CP4A patterns or capabilities to be deployed. This CR represents Operational Decsision Manage "decisions" pattern
+    ## that brings Decision Center, Rule Execution Server and Decision Runner, based on the user specification in the 
+    ## sc_optional_components specification
+    sc_deployment_patterns: "foundation,decisions"
+    ## The optional components to be installed if listed here.
+    ## This is normally populated by the deploy script based on input from the user.
+    ## User can also manually specify the optional components to be deployed here.
+    ## This pattern has has 5: decisionCenter (Business Console), decisionRunner (Testing and Simulation runtime), decisionServerRuntime (Rule Execution Server), bai (Business Automation Insight), ums (User Management Service) optionals components.
+    ## If decisionCenter is set, you also have to set the 'odm_configuration.decisionCenter.enabled' flag to true to install it.
+    ## If decisionRunner is set, you also have to set the 'odm_configuration.decisionRunner.enabled' flag to true to install it.
+    ## If decisionServerRuntime is set, you also have to set the 'odm_configuration.decisionRuntime.enabled' flag to true to install it.
+    sc_optional_components: "decisionCenter,decisionServerRuntime"
+    ## The deployment type as selected by the user.  Possible values are: demo, enteprise
+    sc_deployment_type: "enterprise"
+    ## The platform to be deployed specified by the user.  Possible values are: OCP and other.  This is normally populated by the User script
+    ## based on input from the user.
+    sc_deployment_platform: "ROKS"
+    ## This is the deployment hostname suffix, this is optional and the default hostname suffix will be used as {meta.namespace}.router-canonicalhostname
+    # sc_deployment_hostname_suffix: "{{ meta.namespace }}.<Required>"
+
+    ## For ROKS, this is used to enable the creation of ingresses. The default value is "false", which routes will be created.
+    sc_ingress_enable: false
+    ## For ROKS Ingress, provide TLS secret name for Ingress controller. If you are not using ROKS, comment out this line.
+    sc_ingress_tls_secret_name: <Required>
+    ## If the root certificate authority (CA) key of the external service is not signed by the operator root CA key, provide the TLS certificate of
+    ## the external service to the component's truststore.
+    trusted_certificate_list: []
+    ## On OCP 3.x and 4.x, the User script will populate these three (3) parameters based on your input for "enterprise" deployment.
+    ## If you manually deploying without using the User script, then you would provide the different storage classes for the slow, medium
+    ## and fast storage parameters below.  If you only have 1 storage class defined, then you can use that 1 storage class for all 3 parameters.
+    storage_configuration:
+      sc_slow_file_storage_classname: cp4a-file-retain-bronze-gid
+      sc_medium_file_storage_classname: cp4a-file-retain-silver-gid
+      sc_fast_file_storage_classname: ibmc-file-gold-gid
+    sc_cpe_limited_storage: false
+    image_pull_secrets:
+    - admin.registrykey
+  ## The beginning section of LDAP configuration for CP4A
+  ldap_configuration:
+    ## The possible values are: "IBM Security Directory Server" or "Microsoft Active Directory"
+    lc_selected_ldap_type: "Microsoft Active Directory"
+    ## The name of the LDAP server to connect
+    lc_ldap_server: "<Required>"
+    ## The port of the LDAP server to connect.  Some possible values are: 389, 636, etc.
+    lc_ldap_port: "<Required>"
+    ## The LDAP bind secret for LDAP authentication.  The secret is expected to have ldapUsername and ldapPassword keys.  Refer to Knowledge Center for more info.
+    lc_bind_secret: ldap-bind-secret
+    ## The LDAP base DN.  For example, "dc=example,dc=com", "dc=abc,dc=com", etc
+    lc_ldap_base_dn: "<Required>"
+    ## Enable SSL/TLS for LDAP communication. Refer to Knowledge Center for more info.
+    lc_ldap_ssl_enabled: true
+    ## The name of the secret that contains the LDAP SSL/TLS certificate.
+    lc_ldap_ssl_secret_name: "<Required>"
+    ## The LDAP user name attribute. Semicolon-separated list that must include the first RDN user distinguished names. One possible value is "*:uid" for TDS and "user:sAMAccountName" for AD. Refer to Knowledge Center for more info.
+    lc_ldap_user_name_attribute: "<Required>"
+    ## The LDAP user display name attribute. One possible value is "cn" for TDS and "sAMAccountName" for AD. Refer to Knowledge Center for more info.
+    lc_ldap_user_display_name_attr: "<Required>"
+    ## The LDAP group base DN.  For example, "dc=example,dc=com", "dc=abc,dc=com", etc
+    lc_ldap_group_base_dn: "<Required>"
+    ## The LDAP group name attribute.  One possible value is "*:cn" for TDS and "*:cn" for AD. Refer to Knowledge Center for more info.
+    lc_ldap_group_name_attribute: "*:cn"
+    ## The LDAP group display name attribute.  One possible value for both TDS and AD is "cn". Refer to Knowledge Center for more info.
+    lc_ldap_group_display_name_attr: "cn"
+    ## The LDAP group membership search filter string.  One possible value is "(|(&(objectclass=groupofnames)(member={0}))(&(objectclass=groupofuniquenames)(uniquemember={0})))" for TDS
+    ## and "(&(cn=%v)(objectcategory=group))" for AD.
+    lc_ldap_group_membership_search_filter: "<Required>"
+    ## The LDAP group membership ID map.  One possible value is "groupofnames:member" for TDS and "memberOf:member" for AD.
+    lc_ldap_group_member_id_map: "<Required>"
+    ## The User script will uncomment the section needed based on user's input from User script.  If you are deploying without the User script,
+    ## uncomment the necessary section (depending if you are using Active Directory (ad) or Tivoli Directory Service (tds)) accordingly.
+    ad:
+      lc_ad_gc_host: "<Required>"
+      lc_ad_gc_port: "<Required>"
+      lc_user_filter: "(&(sAMAccountName=%v)(objectcategory=user))"
+      lc_group_filter: "(&(cn=%v)(objectcategory=group))"
+      # tds:
+      #   lc_user_filter: "(&(cn=%v)(objectclass=person))"
+      #   lc_group_filter: "(&(cn=%v)(|(objectclass=groupofnames)(objectclass=groupofuniquenames)(objectclass=groupofurls)))"
+  ## The beginning section of database configuration for CP4A
+  datasource_configuration:
+    ## The dc_ssl_enabled parameter is used to support database connection over SSL for DB2/Oracle .
+    dc_ssl_enabled: true
+    ## The database_precheck parameter is used to enable or disable CPE/Navigator database connection check.
+    ## If set to "true", then CPE/Navigator database connection check will be enabled.
+    ## if set to "false", then CPE/Navigator database connection check will not be enabled.
+
+    # database_precheck: true
+    ## The database configuration for ICN (Navigator) - aka BAN (Business Automation Navigator)
+    dc_icn_datasource:
+      ## Provide the database type from your infrastructure.  The possible values are "db2" or "db2HADR" or "oracle" or "postgresql".  This should be the same as the
+      ## GCD and object store configuration above.
+      dc_database_type: "<Required>"
+      ## Provide the ICN datasource name.  The default value is "ECMClientDS".
+      dc_common_icn_datasource_name: "ECMClientDS"
+      database_servername: "<Required>"
+      ## Provide the database server port.  For Db2, the default is "50000".  For Oracle, the default is "1521"
+      database_port: "<Required>"
+      ## Provide the name of the database for ICN (Navigator).  For example: "ICNDB"
+      database_name: "<Required>"
+      ## The name of the secret that contains the DB2 SSL certificate.
+      database_ssl_secret_name: "<Required>"
+      ## If the database type is Oracle, provide the Oracle DB connection string.  For example, "jdbc:oracle:thin:@//<oracle_server>:1521/orcl"
+      dc_oracle_icn_jdbc_url: "<Required>"
+      ######################################################################################
+      ## If the database type is "Db2HADR", then complete the rest of the parameters below.
+      ## Otherwise, remove or comment out the rest of the parameters below.
+      ######################################################################################
+      dc_hadr_standby_servername: "<Required>"
+      ## Provide the standby database server port.  For Db2, the default is "50000".
+      dc_hadr_standby_port: "<Required>"
+      ## Provide the validation timeout.  If not preference, keep the default value.
+      dc_hadr_validation_timeout: 15
+      ## Provide the retry internal.  If not preference, keep the default value.
+      dc_hadr_retry_interval_for_client_reroute: 15
+      ## Provide the max # of retries.  If not preference, keep the default value.
+      dc_hadr_max_retries_for_client_reroute: 3
+    dc_odm_datasource:
+      ## Provide the database type from your infrastructure. 
+      ## The possible values are "db2" / "postgres" / "sqlserver".
+      dc_database_type: "<Required>"
+      ## Provide the database server name or IP address of the database server.
+      database_servername: "<Required>"
+      ## Provide the database server port.  For Db2, the default is "50000".  For Oracle, the default is "1521"
+      dc_common_database_port: "<Required>"
+      ## Provide the name of the database for ODM.  For example: "ODMDB"
+      dc_common_database_name: "<Required>"
+      ## The name of the secret that contains the credentials to connect to the database.
+      dc_common_database_instance_secret: "<Required>"
+      ## Set to true when the database is using SSL
+      dc_common_ssl_enabled: true
+      ## If SSL is used to secure the database connection, specify the name of the SSL secret.
+      dc_ssl_secret_name: "<Required>"
+  ########################################################################
+  ########      IBM Operational Decision Manager configuration    ########
+  ########################################################################
+  odm_configuration:
+    # To enable ODM Runtime.
+    decisionServerRuntime:
+      enabled: true
+      replicaCount: 2
+    # To enable the Authoring part
+    decisionRunner:
+      enabled: false
+      replicaCount: 2
+    decisionCenter:
+      enabled: true
+      replicaCount: 2
+    # For UMS
+    # customization:
+    ## Customizes user authentication and management by realizing mapping between UMS Roles and LDAP groups.
+    #  authSecretRef: "<Required>"
+    # Specify the name of the topic that is used to send ODM events to the Kafka provider.
+    #  bai_kafka_topic:

@@ -1,0 +1,5 @@
+resources:
+- cp4a-dev-env-app.yaml
+- openldap-app.yaml
+- postgresql-app.yaml
+

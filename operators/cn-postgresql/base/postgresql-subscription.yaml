@@ -9,4 +9,4 @@ spec:
   name: cloud-native-postgresql
   source: ibm-operator-catalog
   sourceNamespace: openshift-marketplace
-  startingCSV: cloud-native-postgresql.v1.6.0
+  startingCSV: cloud-native-postgresql.v1.9.2

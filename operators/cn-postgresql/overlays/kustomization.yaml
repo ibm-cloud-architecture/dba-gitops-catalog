@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: openshift-operators
 
 bases:
-  - ../../base
+  - ../base
 
 patchesJson6902:
 - target:
