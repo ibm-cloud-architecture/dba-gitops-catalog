@@ -1,8 +1,19 @@
+# modify 
 SCRIPT_VERSION=3.1.4
 CERT_VERSION=21.0.2
 
 CP4BA_AUTO_NAMESPACE=cp4ba
 CP4BA_AUTO_CLUSTER_USER="IAM#boyerje@us.ibm.com"
+
+# modify with care
+export ENTITLEMENT_KEY=`cat ./assets/entitlement_key.text`
+export IBM_EMAIL=`cat ./assets/entitlement_key.text`
+
+export CP4BA_AUTO_PLATFORM="ROKS"
+export CP4BA_AUTO_DEPLOYMENT_TYPE="demo"
+export CP4BA_AUTO_STORAGE_CLASS_FAST_ROKS="ibmc-file-gold-gid"
+export CP4BA_AUTO_ENTITLEMENT_KEY=`cat ./assets/entitlement_key.text`
+
 
 echo "##### 1- create user $CP4BA_AUTO_CLUSTER_USER"
 htpasswd -c -B -b users.htpasswd $CP4BA_AUTO_CLUSTER_USER $CP4BA_AUTO_CLUSTER_USER
@@ -25,13 +36,6 @@ oc apply -f bootstrap/service-account-for-demo.yaml -n ${CP4BA_AUTO_NAMESPACE}
 oc adm policy add-scc-to-user privileged -z ibm-cp4ba-privileged -n ${CP4BA_AUTO_NAMESPACE}
 oc adm policy add-scc-to-user anyuid -z ibm-cp4ba-anyuid -n ${CP4BA_AUTO_NAMESPACE}
 
-export ENTITLEMENT_KEY=`cat ./assets/entitlement_key.text`
-export IBM_EMAIL=`cat ./assets/entitlement_key.text`
-
-export CP4BA_AUTO_PLATFORM="ROKS"
-export CP4BA_AUTO_DEPLOYMENT_TYPE="demo"
-export CP4BA_AUTO_STORAGE_CLASS_FAST_ROKS="ibmc-file-gold-gid"
-export CP4BA_AUTO_ENTITLEMENT_KEY=`cat ./assets/entitlement_key.text`
 
 cd ./assets/ibm-cp-automation/inventory/cp4aOperatorSdk/files/deploy/crs/cert-kubernetes/scripts
 ./cp4a-clusteradmin-setup.sh
