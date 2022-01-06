@@ -1,15 +1,14 @@
 # Digital Business Automation Solution gitOps catalog
 
 This GitOps Catalog includes [kustomize](http://kustomize.io) base and overlays folders for a 
-number of OpenShift operators needed 
-to develop IBM Digital Business Automation solution and services.
+number of OpenShift operators needed to deploy IBM Digital Business Automation solution and services.
 
 ## Pre-requisites
 
 ### On your laptop
 
-* git, oc, podman or docker CLIs, with unzip tool.
-* Get this repository for the scripts and CRs
+* git client, oc CLI, podman or docker CLIs, with unzip tool.
+* Get this repository for the scripts and Custom Resources
 
 ```sh
 git clone https://github.com/ibm-cloud-architecture/dba-gitops-catalog.git
@@ -25,7 +24,7 @@ A cluster will all capabilities need 11 nodes (see [system requirements](https:/
 
 * Be sure to have the cluster using Network Time Protocol by setting [a chrony time service](https://www.ibm.com/docs/en/openshift?source=https%3A%2F%2Fdocs.openshift.com%2Fcontainer-platform%2F4.7%2Finstalling%2Finstall_config%2Finstalling-customizing.html%23installation-special-config-chrony_installing-customizing&referrer=SSYHZ8_21.0.x%2Fcom.ibm.dba.install%2Fop_topics%2Ftsk_preparing_demo.html).
 
-For demo purpose, a three nodes cluster is enough ( 32 CPUs and 64Gi RAM (e.g., flavor c3c.32x64 on ROKS)). See this [set of questions](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-quick-reference-qa-demo)
+For demo purpose, a three nodes cluster is enough ( 32 CPUs and 64Gi RAM (e.g., flavor c3c.32x64 on ROKS)). See this [set of questions](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=deployments-quick-reference-qa-demo)
 to review.
 
 1. As you may use `ssh` on a cluster node, append your personal local public key (id_rsa.pub) to the cluster bootstrap server `~/.ssh/authorized_keys`:
@@ -36,37 +35,35 @@ to review.
 
 1. Create htpasswd credentials file, and secret
 
-  ```sh
-  htpasswd -c -B -b users.htpasswd OPENSHIFT_USER OPENSHIFT_USER_PASSWORD
+   ```sh
+   htpasswd -c -B -b users.htpasswd OPENSHIFT_USER OPENSHIFT_USER_PASSWORD
 
-  oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n openshift-config
-  ```
+   oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n openshift-config
+   ```
 
-4. Add identity provider to OpenShift to define a specific user to install the cloud pak
+1. Add identity provider to OpenShift to define a specific user to install the cloud pak. This is done by creating yaml file:
 
-  Create yaml file:
-
-  ```yaml
-  apiVersion: config.openshift.io/v1
-  kind: OAuth
-  metadata:
-    name: cluster
-  spec:
-  identityProviders:
-  - name: local
+   ```yaml
+   apiVersion: config.openshift.io/v1
+   kind: OAuth
+   metadata:
+     name: cluster
+   spec:
+    identityProviders:
+    - name: local
       mappingMethod: claim
       type: HTPasswd
       htpasswd:
       fileData:
           name: htpass-secret
-  ```
+   ```
    
    Then do: 
 
-  ```sh
-  oc apply -f identityProvider.yaml
-  oc adm policy add-cluster-role-to-user cluster-admin OPENSHIFT_USER
-  ```
+    ```sh
+    oc apply -f identityProvider.yaml
+    oc adm policy add-cluster-role-to-user cluster-admin OPENSHIFT_USER
+    ```
 
 
 ### IBM Entitlement Key
