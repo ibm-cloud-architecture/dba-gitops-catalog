@@ -5,10 +5,10 @@ The product documentation is in [bitmani site](https://docs.bitnami.com/tutorial
 To create a project to keep OpenLDAP with a secret do the following:
 
 ```sh
-oc apply -k instances/openLDAP
+oc apply -k environments/openLDAP
 ```
 
-which will create the name space, a secret, deploy a openLDAP pod and expose a service
+which will create the namespace, a secret, deploy a openLDAP pod and expose a service
 
 adminpassword=adminpassword 
 users=user01,user02,cpadmin 
