@@ -19,10 +19,10 @@ oc apply -k ibm-cp4a-catalog/overlays
 
 
 echo "Define base operators"
-oc apply -k operators/openshift-gitops/overlays/stable
+oc apply -k openshift-gitops/overlays/stable
 #oc apply -k operators/openshift-pipelines/overlays/stable
-oc apply -k operators/sealed-secrets/overlays/default
-oc apply -k operators/cn-postgresql/overlays
+oc apply -k sealed-secrets/overlays/default
+oc apply -k cn-postgresql/overlays
 
 echo "Get IBM CP automation configuration and scripts"
 source scripts/getCpAutomationSDG
@@ -34,7 +34,7 @@ echo "Create OCP project named: ${CP4BA_AUTO_NAMESPACE}"
 oc new-project ${CP4BA_AUTO_NAMESPACE}
 oc project ${CP4BA_AUTO_NAMESPACE}
 
-oc apply -f bootstrap/service-account-for-demo.yaml -n ${CP4BA_AUTO_NAMESPACE}
+oc apply -f bootstrap/service-accounts.yaml -n ${CP4BA_AUTO_NAMESPACE}
 oc adm policy add-scc-to-user privileged -z ibm-cp4ba-privileged -n ${CP4BA_AUTO_NAMESPACE}
 oc adm policy add-scc-to-user anyuid -z ibm-cp4ba-anyuid -n ${CP4BA_AUTO_NAMESPACE}
 

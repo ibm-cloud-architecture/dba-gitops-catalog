@@ -1,0 +1,6 @@
+- op: replace
+  path: /spec/channel
+  value: v21.2
+- op: replace
+  path: /spec/startingCSV
+  value: ibm-cp4a-operator.v21.2.0
