@@ -34,7 +34,7 @@ echo "Create OCP project named: ${CP4BA_AUTO_NAMESPACE}"
 oc new-project ${CP4BA_AUTO_NAMESPACE}
 oc project ${CP4BA_AUTO_NAMESPACE}
 
-oc apply -f bootstrap/service-accounts.yaml -n ${CP4BA_AUTO_NAMESPACE}
+oc apply -f cp4ba-operator/service-accounts.yaml -n ${CP4BA_AUTO_NAMESPACE}
 oc adm policy add-scc-to-user privileged -z ibm-cp4ba-privileged -n ${CP4BA_AUTO_NAMESPACE}
 oc adm policy add-scc-to-user anyuid -z ibm-cp4ba-anyuid -n ${CP4BA_AUTO_NAMESPACE}
 

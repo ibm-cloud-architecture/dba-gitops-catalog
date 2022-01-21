@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - cp4a-namespace.yaml
   - operator-shared-pvc.yaml
-  - service-account.yaml
+  - service-accounts.yaml
   - cp4a-operator.yaml
 
   
