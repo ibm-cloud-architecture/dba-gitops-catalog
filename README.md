@@ -1,9 +1,18 @@
 # Digital Business Automation Solution gitOps catalog
 
-This GitOps Catalog includes [kustomize](http://kustomize.io) base and overlays folders for a 
-number of OpenShift operators needed to deploy IBM Digital Business Automation solution and services.
+Updated 1/26/22
 
-This repository is using the same structure as introduced by Red Hat COP team in this repository.
+## Overview
+
+This GitOps Catalog includes [kustomize](http://kustomize.io) base and overlays folders for a 
+number of OpenShift operators needed to deploy IBM Digital Business Automation solution and products.
+This repository is using the same structure as introduced by Red Hat COP team in [this repository](https://github.com/redhat-cop/gitops-catalog).
+
+From a DBA solution point of view the 
+
+![](./images/hl-view.png)
+
+
 
 ## Pre-requisites
 
