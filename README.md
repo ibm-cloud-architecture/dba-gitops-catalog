@@ -1,6 +1,8 @@
 # Digital Business Automation Solution gitOps catalog
 
-Updated 1/26/22
+Updated 2/2/22
+
+
 
 ## Overview
 
@@ -228,7 +230,7 @@ Note that none of these bases specify a namespace, in your kustomization overlay
 you can include the specific namespace you want to install the tool into.
 
 
-## Bibliography:
+## Resources
 
 *Preparing:*
 
@@ -263,3 +265,5 @@ UMS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=param
 BAS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-business-automation-studio
 
 ADS: https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=parameters-automation-decision-services
+
+Helm based GitOps for Cloud Pak [https://github.com/IBM/cloudpak-gitops](https://github.com/IBM/cloudpak-gitops)
