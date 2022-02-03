@@ -2,23 +2,67 @@
 
 Updated 2/2/22
 
-
-
 ## Overview
 
 This GitOps Catalog includes [kustomize](http://kustomize.io) base and overlays folders for a 
-number of OpenShift operators needed to deploy IBM Digital Business Automation solution and products.
-This repository is using the same structure as introduced by Red Hat COP team in [this repository](https://github.com/redhat-cop/gitops-catalog).
+number of OpenShift operators needed to deploy IBM Digital Business Automation products.
+This repository is using the same catalog structure as introduced by Red Hat COP team in [this repository](https://github.com/redhat-cop/gitops-catalog).
 
-From a DBA solution point of view the 
+This repository define Operator subscriptions for the different IBM Cloud Pak for Automation product release starting for 2021.3 or Q4 release.
 
-![](./images/hl-view.png)
+Cloud Pak for Automation has a set of different capabilities that could be presented in the following figure:
+
+![](./docs/images/CP4Automation-capabilities.png)
+
+(src for this diagram: [docs/diagrams/CP4Automation-capabilities.drawio](./docs/diagrams/CP4Automation-capabilities.drawio))
+
+To support those capabilities, different operators may be deployed to an OpenShift cluster:
+
+![](./docs/images/CP4BA_Operators.png)
+
+(src for this diagram: [docs/diagrams/CP4BA_Operators.drawio](./docs/diagrams/CP4BA_Operators.drawio))
+
+This is an example of such operators visible within the OpenShift console
+
+![](./docs/images/OCPconsole-baoperators.png)
 
 
+* **IBM® Automation Foundation Core**: 
 
-## Pre-requisites
+    * RPA-driven automation, process mining, mongoDB for Identity and Access Management (IAM), metering, OpenID,..  Zen UI.
 
-### On your laptop
+* **Cloud Pak foundational services**: (bedrock - common services) [Product doc](https://www.ibm.com/docs/en/cpfs). It includes IAM and certificate management.
+* **IBM® Automation Insights foundation** operator installs the required dependency operators, such as the IBM Events Operator, the Elasticsearch Operator and the Event Processing Operator.
+* **Cloud Pak for Business Automation** includes Business Automation Studio and Business Automation Navigator to provide a unified authoring environment and an entry point to various low-code design tools with a single sign-on (SSO) experience and team management.
+
+
+Zooming into operators we can see, for example, for Foundational services the following operators:
+
+![](./docs/images/Foundational_Services_on_OCP.png)
+
+Once those operators are installed, the way operands will be added will depend on the 
+different products to install
+and if they are shared between developer teams or not. 
+
+
+### BAW example
+
+If we want to develop process application, we will have the Automation Studio deployed in one namespace and then 
+the process servers in the different environment namespaces:
+
+![](./docs/images/Business_Automation_WorkflowOCP.png)
+
+This GitOps Catalog define the operator only. The [infra gitOps repository]() define the runtime deployment and authoring
+components as Business Automation Studio.
+
+## Setting up a cluster
+
+In this section we will present how to jumpstart the operators deployment:
+
+
+### Pre-requisites
+
+#### On your laptop
 
 * git client, oc CLI, podman or docker CLIs, with unzip tool.
 * Get this repository for the scripts and Custom Resources
@@ -27,7 +71,7 @@ From a DBA solution point of view the
 git clone https://github.com/ibm-cloud-architecture/dba-gitops-catalog.git
 ```
 
-### Red Hat OpenShift  
+#### Red Hat OpenShift  
 
 * Get a running OpenShift v4.7+ cluster with enough resources to deploy cloud pak for automation. 
 A cluster will all capabilities need 11 nodes (see [system requirements](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=ppd-system-requirements)):
