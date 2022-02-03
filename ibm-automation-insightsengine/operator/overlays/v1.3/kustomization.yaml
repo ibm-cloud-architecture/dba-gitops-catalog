@@ -1,0 +1,8 @@
+bases:
+  - ../../base
+
+patchesJson6902:
+- path: patch-channel.yaml
+  target:
+    kind: Subscription
+    name: ibm-automation-insightsengine

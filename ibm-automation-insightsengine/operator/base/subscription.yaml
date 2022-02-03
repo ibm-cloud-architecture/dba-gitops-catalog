@@ -1,0 +1,12 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: ibm-automation-insightsengine
+  namespace: openshift-operators
+spec:
+  channel: v1.3
+  installPlanApproval: Automatic
+  name: ibm-automation-insightsengine
+  source: ibm-operator-catalog
+  sourceNamespace: openshift-marketplace
+  startingCSV: ibm-automation-insightsengine.v1.3.2

@@ -1,12 +1,12 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
-  name: ibm-automation-eventprocessing-v1.2-ibm-operator-catalog-openshift-marketplace
-  namespace: cp4ba
+  name: ibm-automation-eventprocessing
+  namespace: openshift-operators
 spec:
-  channel: v1.2
+  channel: v1.3
   installPlanApproval: Automatic
   name: ibm-automation-eventprocessing
   source: ibm-operator-catalog
   sourceNamespace: openshift-marketplace
-  startingCSV: ibm-automation-eventprocessing.v1.2.0
+  startingCSV: ibm-automation-eventprocessing.v1.3.3
