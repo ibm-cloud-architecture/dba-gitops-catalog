@@ -36,23 +36,27 @@ This is an example of such operators visible within the OpenShift console
 * **Cloud Pak for Business Automation** includes Business Automation Studio and Business Automation Navigator to provide a unified authoring environment and an entry point to various low-code design tools with a single sign-on (SSO) experience and team management.
 
 
-Zooming into operators we can see, for example, for Foundational services the following operators:
-
-![](./docs/images/Foundational_Services_on_OCP.png)
-
 Once those operators are installed, the way operands will be added will depend on the 
 different products to install
 and if they are shared between developer teams or not. 
 
+The installation of the Cloud Pak for Business Automation operator will also install dependent ones.
+
+### Common services
+
+Installing most of those operators will create Foundational service instances like in the following figure:
+
+![](./docs/images/Foundational_Services_on_OCP.png)
+(src for this diagram: [docs/diagrams/Foundational_Services_on_OCP.drawio](./docs/diagrams/Foundational_Services_on_OCP.drawio))
 
 ### BAW example
 
-If we want to develop process application, we will have the Automation Studio deployed in one namespace and then 
-the process servers in the different environment namespaces:
+If we want to develop process applications, we will have the Automation Studio deployed in one namespace and then 
+the process servers and other runtimes in the different environment namespaces (dev, staging):
 
 ![](./docs/images/Business_Automation_WorkflowOCP.png)
 
-This GitOps Catalog define the operator only. The [infra gitOps repository]() define the runtime deployment and authoring
+This GitOps Catalog define the operator only. The [infra gitOps repository](https://github.com/ibm-cloud-architecture/dba-infra-gitops) defines the runtime deployment and authoring
 components as Business Automation Studio.
 
 ## Setting up a cluster
