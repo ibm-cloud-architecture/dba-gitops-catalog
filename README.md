@@ -2,10 +2,15 @@
 
 Updated 2/2/22
 
+[GitOps](https://www.redhat.com/en/topics/devops/what-is-gitops) is a set of practices to manage infrastructure and application configurations using Git.
+GitOps works by using Git as a single source of truth for declarative infrastructure and applications.
+GitOps uses Git pull requests to manage infrastructure provisioning and deployment automatically. 
+The Git repository contains the entire state of the system so that the trail of changes to the system state is visible and auditable.
+
 ## Overview
 
 This GitOps Catalog includes [kustomize](http://kustomize.io) base and overlays folders for a 
-number of OpenShift operators needed to deploy IBM Digital Business Automation products.
+number of OpenShift operators needed to deploy IBM Cloud Pak for Business Automation products.
 This repository is using the same catalog structure as introduced by Red Hat COP team in [this repository](https://github.com/redhat-cop/gitops-catalog).
 
 This repository define Operator subscriptions for the different IBM Cloud Pak for Automation product release starting for 2021.3 or Q4 release.
@@ -42,11 +47,19 @@ and if they are shared between developer teams or not.
 
 The installation of the Cloud Pak for Business Automation operator will also install dependent ones.
 
+Read this [important note](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=deployment-capabilities-starter-deployments) on reelationship between capabilities and operators. 
+
+Depending on the selected capabilities, the needed components of the foundation are installed. The final custom resource file combines capabilities and components from one or more capabilities.
+
+A deployment of the Cloud Pak custom resource also includes an instance of IBM Automation foundation and the IBM Cloud Pak foundational services. Depending on the capabilities that you select, the dependency operators create the service instances.
+
+
 ### Common services
 
 Installing most of those operators will create Foundational service instances like in the following figure:
 
 ![](./docs/images/Foundational_Services_on_OCP.png)
+
 (src for this diagram: [docs/diagrams/Foundational_Services_on_OCP.drawio](./docs/diagrams/Foundational_Services_on_OCP.drawio))
 
 ### BAW example
@@ -54,15 +67,16 @@ Installing most of those operators will create Foundational service instances li
 If we want to develop process applications, we will have the Automation Studio deployed in one namespace and then 
 the process servers and other runtimes in the different environment namespaces (dev, staging):
 
-![](./docs/images/Business_Automation_WorkflowOCP.png)
+![](./docs/images/BAW_BAI.png)
 
-This GitOps Catalog define the operator only. The [infra gitOps repository](https://github.com/ibm-cloud-architecture/dba-infra-gitops) defines the runtime deployment and authoring
-components as Business Automation Studio.
+(src for this diagram: [docs/diagrams/Business_Automation_WorkflowOCP.drawio](./docs/diagrams/Business_Automation_WorkflowOCP.drawio))
+
+This GitOps Catalog defines the operator only. The [infra gitOps repository](https://github.com/ibm-cloud-architecture/dba-infra-gitops) defines 
+custom resources for runtime  and authoring component deployments.
 
 ## Setting up a cluster
 
 In this section we will present how to jumpstart the operators deployment:
-
 
 ### Pre-requisites
 

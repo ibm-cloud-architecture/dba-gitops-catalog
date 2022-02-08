@@ -1,6 +1,6 @@
 ﻿<mxfile host="65bd71144e">
     <diagram id="n7cRyCmh6ItZVgxvmuYI" name="Page-1">
-        <mxGraphModel dx="587" dy="400" grid="1" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1197" dy="358" grid="1" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
             <root>
                 <MiscDiagram modelType="MiscDiagram" lastModifiedUserId="dbush@ibm.com" description="" lastModified="2022-01-25T23:59:19Z" _id="miscdiagram_B1mi-XiVt" label="Business Automation Workflow on OCP" id="0">
                     <mxCell/>
@@ -64,29 +64,9 @@
                         <mxGeometry x="16" y="263.5" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Intelligent Task Prioritization" Icon-Name="cube" _id="userobject_36y3cLwKX6J" id="miscdiagram_B1mi-XiVt_283dyQNuR9ckj">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_233dyQNuR5TzZ" vertex="1">
-                        <mxGeometry x="16" y="336.5" width="144" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
                 <UserObject placeholders="1" label="Resource Registry" Icon-Name="cube" _id="userobject_36y3cLwXUUV" id="miscdiagram_B1mi-XiVt_293dyQNuRFxgx">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_233dyQNuR5TzZ" vertex="1">
                         <mxGeometry x="16" y="411.5" width="144" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="CMIS" Icon-Name="cube" _id="userobject_36y3cLwbZLd" id="miscdiagram_B1mi-XiVt_303dyQNuRKM2L">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_233dyQNuR5TzZ" vertex="1">
-                        <mxGeometry x="168" y="411.5" width="144" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="GraphQL (opt)" Icon-Name="cube" _id="userobject_36y3cLwqY6W" id="miscdiagram_B1mi-XiVt_313dyQNuRqNgW">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_233dyQNuR5TzZ" vertex="1">
-                        <mxGeometry x="168" y="336.5" width="144" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Platform Engine" Icon-Name="cube" _id="userobject_36y3cLwYVOy" id="miscdiagram_B1mi-XiVt_323dyQNuRf5Pd">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_233dyQNuR5TzZ" vertex="1">
-                        <mxGeometry x="168" y="263.5" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject placeholders="1" label="JMS" Icon-Name="cube" _id="userobject_36y3cLwyxS9" id="miscdiagram_B1mi-XiVt_333dyQNuRNixF">
@@ -99,32 +79,36 @@
                         <mxGeometry x="168" y="115.5" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
+                <mxCell id="12" value="openshift-operators" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;" parent="2" vertex="1">
+                    <mxGeometry x="8" y="37" width="328" height="107" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="cp4ba-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="2" vertex="1">
+                    <mxGeometry x="16" y="64" width="88" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="AFI-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="2" vertex="1">
+                    <mxGeometry x="112" y="64" width="80" height="31" as="geometry"/>
+                </mxCell>
                 <mxCell id="15" value="cp4a namespace" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" parent="2" vertex="1">
                     <mxGeometry x="8" y="192" width="328" height="336" as="geometry"/>
                 </mxCell>
                 <UserObject placeholders="1" label="Business Automation Navigator" Icon-Name="cube" _id="userobject_36xxOpgz7oH" id="miscdiagram_B1mi-XiVt_183dyQNuRCdp0">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="2" vertex="1">
-                        <mxGeometry x="22" y="233" width="138" height="64" as="geometry"/>
+                        <mxGeometry x="22" y="233" width="298" height="23" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject placeholders="1" label="Business Automation Studio" Icon-Name="cube" _id="userobject_36xzUgNaQta" id="miscdiagram_B1mi-XiVt_203dyQNuRJsQD">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="2" vertex="1">
-                        <mxGeometry x="177" y="232" width="144" height="64" as="geometry"/>
+                        <mxGeometry x="177" y="304" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject placeholders="1" label="Workflow Authoring" Icon-Name="cube" _id="userobject_33307lJiBC1" id="miscdiagram_B1mi-XiVt_173dyQNuRdhab">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="2" vertex="1">
-                        <mxGeometry x="177" y="304" width="144" height="64" as="geometry"/>
+                        <mxGeometry x="177" y="376" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject placeholders="1" label="Workflow Server" Icon-Name="cube" id="miscdiagram_B1mi-XiVt_163dyQNuR74nw">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="2" vertex="1">
                         <mxGeometry x="21" y="304" width="144" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Platform Engine" Icon-Name="cube" _id="userobject_36xA98gBrEq" id="miscdiagram_B1mi-XiVt_213dyQNuRk7iZ">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="2" vertex="1">
-                        <mxGeometry x="177" y="376" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject placeholders="1" label="JMS" Icon-Name="cube" _id="userobject_36xAfdTrJis" id="miscdiagram_B1mi-XiVt_223dyQNuR4viP">
@@ -137,6 +121,18 @@
                         <mxGeometry x="96" y="448" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
+                <mxCell id="21" value="wps-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="2">
+                    <mxGeometry x="200" y="64" width="80" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="foundational services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="2">
+                    <mxGeometry x="16" y="104" width="80" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="foundation core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="2">
+                    <mxGeometry x="112" y="104" width="80" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Automation foundation&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="2">
+                    <mxGeometry x="200" y="104" width="80" height="31" as="geometry"/>
+                </mxCell>
                 <mxCell id="3" value="OpenShift Cluster 4.7-4.8 Prod" style="swimlane;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
                     <mxGeometry x="736" y="24" width="400" height="560" as="geometry"/>
                 </mxCell>
@@ -165,29 +161,9 @@
                         <mxGeometry x="16" y="183.5" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Intelligent Task Prioritization" Icon-Name="cube" _id="userobject_3aq1Apyd17G" id="miscdiagram_B1mi-XiVt_413dyQNuRLKEp">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_363dyQNuRBiuD" vertex="1">
-                        <mxGeometry x="16" y="256.5" width="144" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
                 <UserObject placeholders="1" label="Resource Registry" Icon-Name="cube" _id="userobject_3aq1Apygkcd" id="miscdiagram_B1mi-XiVt_423dyQNuRAbgW">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_363dyQNuRBiuD" vertex="1">
                         <mxGeometry x="16" y="331.5" width="144" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="CMIS" Icon-Name="cube" _id="userobject_3aq1ApygPoH" id="miscdiagram_B1mi-XiVt_433dyQNuRjUTo">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_363dyQNuRBiuD" vertex="1">
-                        <mxGeometry x="168" y="331.5" width="144" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="GraphQL (opt)" Icon-Name="cube" _id="userobject_3aq1ApyVMvK" id="miscdiagram_B1mi-XiVt_443dyQNuRU6na">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_363dyQNuRBiuD" vertex="1">
-                        <mxGeometry x="168" y="256.5" width="144" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Platform Engine" Icon-Name="cube" _id="userobject_3aq1ApyZ2iY" id="miscdiagram_B1mi-XiVt_453dyQNuRQRpC">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_363dyQNuRBiuD" vertex="1">
-                        <mxGeometry x="168" y="183.5" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject placeholders="1" label="JMS" Icon-Name="cube" _id="userobject_3aq1Apyf4Vp" id="miscdiagram_B1mi-XiVt_463dyQNuRknFu">
@@ -200,25 +176,25 @@
                         <mxGeometry x="168" y="64" width="144" height="35.5" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <mxCell id="27" value="openshift-operators" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;" vertex="1" parent="3">
+                <mxCell id="25" value="openshift-operators" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;" vertex="1" parent="3">
                     <mxGeometry x="32" y="26" width="328" height="107" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" value="cp4ba-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
+                <mxCell id="26" value="cp4ba-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
                     <mxGeometry x="40" y="53" width="88" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="AFI-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
+                <mxCell id="27" value="AFI-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
                     <mxGeometry x="136" y="53" width="80" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="wps-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
+                <mxCell id="28" value="wps-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
                     <mxGeometry x="224" y="53" width="80" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="foundational services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
+                <mxCell id="29" value="foundational services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
                     <mxGeometry x="40" y="93" width="80" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="foundation core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
+                <mxCell id="30" value="foundation core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
                     <mxGeometry x="136" y="93" width="80" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="Automation foundation&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
+                <mxCell id="31" value="Automation foundation&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
                     <mxGeometry x="224" y="93" width="80" height="31" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="RDB&lt;br&gt;DB2 PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
@@ -238,27 +214,6 @@
                 </mxCell>
                 <mxCell id="11" value="75Gi&lt;br&gt;RWX / RWO&lt;br&gt;Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
                     <mxGeometry x="988.5" y="664" width="60" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="20" value="openshift-operators" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;" vertex="1" parent="1">
-                    <mxGeometry x="16" y="61" width="328" height="107" as="geometry"/>
-                </mxCell>
-                <mxCell id="21" value="cp4ba-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="24" y="88" width="88" height="31" as="geometry"/>
-                </mxCell>
-                <mxCell id="22" value="AFI-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="120" y="88" width="80" height="31" as="geometry"/>
-                </mxCell>
-                <mxCell id="23" value="wps-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="208" y="88" width="80" height="31" as="geometry"/>
-                </mxCell>
-                <mxCell id="24" value="foundational services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="24" y="128" width="80" height="31" as="geometry"/>
-                </mxCell>
-                <mxCell id="25" value="foundation core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="120" y="128" width="80" height="31" as="geometry"/>
-                </mxCell>
-                <mxCell id="26" value="Automation foundation&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="208" y="128" width="80" height="31" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
