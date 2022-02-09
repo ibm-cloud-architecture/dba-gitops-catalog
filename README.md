@@ -76,7 +76,7 @@ custom resources for runtime  and authoring component deployments.
 
 ## Setting up a cluster
 
-In this section we will present how to jumpstart the operators deployment:
+In this section we will present how to jumpstart the operators deployment
 
 ### Pre-requisites
 
@@ -102,44 +102,9 @@ A cluster will all capabilities need 11 nodes (see [system requirements](https:/
 For demo purpose, a three nodes cluster should be enough ( 32 CPUs and 64Gi RAM (e.g., flavor c3c.32x64 on ROKS)). See this [set of questions](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=deployments-quick-reference-qa-demo)
 to review.
 
-1. As you may use `ssh` on a cluster node, append your personal local public key (id_rsa.pub) to the cluster bootstrap server `~/.ssh/authorized_keys`:
+#### Active Directory
 
-   ```sh
-   cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-   ```
-
-1. Create htpasswd credentials file, and secret
-
-   ```sh
-   htpasswd -c -B -b users.htpasswd OPENSHIFT_USER OPENSHIFT_USER_PASSWORD
-
-   oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n openshift-config
-   ```
-
-1. Add one identity provider to OpenShift so you can define a specific user to install the cloud pak. This is done by creating the following yaml file:
-
-   ```yaml
-   apiVersion: config.openshift.io/v1
-   kind: OAuth
-   metadata:
-     name: cluster
-   spec:
-    identityProviders:
-    - name: local
-      mappingMethod: claim
-      type: HTPasswd
-      htpasswd:
-      fileData:
-          name: htpass-secret
-   ```
-   
-   Then do: 
-
-    ```sh
-    oc apply -f identityProvider.yaml
-    oc adm policy add-cluster-role-to-user cluster-admin OPENSHIFT_USER
-    ```
-
+For production deployment, you need a LDAP server accessible from the OpenShift cluster. For demonstration purpose, Cloud Pak for Automation starter configuration uses OpenLDAP.
 
 ### IBM Entitlement Key
 
@@ -157,13 +122,6 @@ The IBM Entitlement Key is required to pull IBM Cloud Pak specific container ima
 The product documentation is proposing to use different scripts to install the different products. So next session
 is a summary of how to use those scripts with some added and adapted steps.
 
-### Deploy OpenLDAP
-
-Deploy an open ldap as active directory in a dedicated `openldap` namespace:
-
-```sh
-oc apply -k instances/openLDAP
-```
 
 ### Deploy PostgreSQL
 
