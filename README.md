@@ -74,6 +74,86 @@ the process servers and other runtimes in the different environment namespaces (
 This GitOps Catalog defines the operator only. The [infra gitOps repository](https://github.com/ibm-cloud-architecture/dba-infra-gitops) defines 
 custom resources for runtime  and authoring component deployments.
 
+### Automation Decision Servicee on AWS - ROSA
+
+[See the detailed article to deploy Cloud Pak for Automation and ADS on AWS  Managed RedHat OpenShift ROSA here](./docs/CP4BA-ADS-ROSAV.md)
+
+## Reuse diagrams and images
+
+The [docs/diagrams](https://github.com/ibm-cloud-architecture/dba-gitops-catalog/tree/main/docs/diagrams) folder includes all reusable diagrams that can be used to present reference architecture and deployment.
+
+To be able to update those diagrams you can use [draw.io on your desktop](https://github.com/jgraph/drawio-desktop/releases), 
+or use [VScode](https://code.visualstudio.com/) with the drawio extension.
+
+The IBM stencils can be found in [this website](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils/releases).
+
+Each of those diagrams were exported to the [images folder](https://github.com/ibm-cloud-architecture/dba-gitops-catalog/tree/main/docs/images) so can be reused in any presentation.
+
+
+### Golden topology for OpenShift
+
+![](./docs/images/gold.png)
+
+### OpenShift High Availability deployment
+
+![](./docs/images/OCP_HA.png)
+
+### Disaster recovery with Persistence Volume duplication
+
+![](./docs/images/DR_with_PV_Duplication.png)
+
+### Disaster recovery with passive data center
+
+![](./docs/images/DR_CP4BA_Config_with_Passive_DC_AZ.png)
+
+![](./docs/images/DR_Containerized_DB_with_Tunnel.png)
+
+![](./docs/images/DR_3_AZ_with_Containerized_DB.png)
+
+### Business Automation Workflow deployment on OCP
+
+![](./docs/images/Business_Automation_WorkflowOCP.png)
+
+### Automation Workstream deployment on OCP
+
+![](./docs/images/Automation_Workstream_Service_on_OCP.png)
+
+### Business Automation Application deployment on OCP
+
+![](./docs/images/Business_Automation_Application_on_OCP.png)
+
+### Content management deployment
+
+![](./docs/images/FNCM_on_OCP_K8s.png)
+
+### Automation decision service deployment
+
+![](./docs/images/Automation_Decision_Services_on_OCP.png)
+
+### Operational Decision Manager deployment on OpenShift
+
+![](./docs/images/Operational_Decision_Manager_on_OCP.png)
+
+### Automation document processing deployment
+
+![](./docs/images/Automation_Document_Processing_on_OCP.png)
+
+![](./docs/images/Automation_Document_Processing_on_OCP2.png)
+
+
+### Process mining deployment on OpenShift
+
+![](./docs/images/Process_Mining_on_OCP.png)
+
+### Robotic Process Automation deployment on OpenShift
+
+![](./docs/images/RPA_on_OCP.png)
+
+
+### Robotic Process Automation deployment on Windows
+
+![](./docs/images/RPA_on_Windows.png)
+
 ## Setting up a cluster
 
 In this section we will present how to jumpstart the operators deployment
@@ -106,7 +186,7 @@ to review.
 
 For production deployment, you need a LDAP server accessible from the OpenShift cluster. For demonstration purpose, Cloud Pak for Automation starter configuration uses OpenLDAP.
 
-### IBM Entitlement Key
+#### IBM Entitlement Key
 
 The IBM Entitlement Key is required to pull IBM Cloud Pak specific container images from the IBM Entitled Registry. To get an entitlement key,
 
@@ -117,138 +197,13 @@ The IBM Entitlement Key is required to pull IBM Cloud Pak specific container ima
     1. Select the Get entitlement key to retrieve the key, place it in a file called `./assets/entitlement_key.text`
     1. Enter the email address used to generate the entitlement key in a file called `./assets/ibm_email.text`
     
-## Usage
 
-The product documentation is proposing to use different scripts to install the different products. So next session
-is a summary of how to use those scripts with some added and adapted steps.
+## Deploy a solution
 
+Each solution will deploy the different IBM Automation components according to their requirements.
 
-### Deploy PostgreSQL
-
-* Deploy postgres operator to monitor all namespaces from `openshift-operators`
-
-```sh
-oc apply -k operators/cn-postgresql/overlays
-```
-
-* Deploy one cluster in its own namespace:
-
-```sh
-oc apply -k instances/postgresql/
-```
-
-
-### silent setup
-
-The `setup_silent.sh` script in this repository,  is getting configuration and scripts from 
-the https://github.com/IBM/cloud-pak/ repository and deploys the foundation services to a ROKS cluster.
-
-* Modify the environment variables of the scripts to reflect your IAM user for ROKS
-and the namespace to install the operators:
-
-  CP4BA_AUTO_NAMESPACE=cp4ba
-  CP4BA_AUTO_CLUSTER_USER=
-
-* Add the entitlement key in the `./assets/entitlement_key.text` and enter the email address used 
-to generate the entitlement key in a file called `./assets/ibm_email.text`
-
-* run the setup silent script which will call the 
-
-```sh
-./setup_silent.sh
-```
-
-* Pods under cp4ba namespace
-
-```sh
-oc get pods -n cp4ba
-
-NAME                                                              READY   STATUS    
-iaf-core-operator-controller-manager-6748557bf5-fvccq             1/1     Running  
-iaf-eventprocessing-operator-controller-manager-bb7f8c954-rhfjk   1/1     Running  
-iaf-flink-operator-controller-manager-7789479c5b-przhn            1/1     Running  
-iaf-operator-controller-manager-7dd9545f48-h6zrz                  1/1     Running  
-ibm-cp4a-operator-6f5c9dc4f9-lrrmr                                1/1     Running  
-ibm-elastic-operator-controller-manager-7bffdfd6bc-8nfcq          1/1     Running  
-```
-
-* Pods under the common services
-
-```sh
-oc get pods -n ibm-common-services
-NAME                                                    READY   STATUS      RESTARTS   AGE
-auth-idp-67f8959d-kwmn4                                 4/4     Running     0          43m
-common-web-ui-54794b98fb-xjbw7                          1/1     Running     0          43m
-ibm-ingress-nginx-operator-79df665b58-4q2l6             1/1     Running     0          43m
-ibm-licensing-operator-5b584f5946-f7nnn                 1/1     Running     0          42m
-ibm-licensing-service-instance-67f64565c6-r5v87         1/1     Running     0          40m
-ibm-management-ingress-operator-cd9956868-98hll         1/1     Running     0          43m
-ibm-monitoring-grafana-7c8d5b9788-wh848                 4/4     Running     0          42m
-ibm-monitoring-grafana-operator-7494fb46cc-kkjc5        1/1     Running     0          43m
-management-ingress-5b999bb4d4-nbqqb                     1/1     Running     0          43m
-nginx-ingress-controller-797647845b-qkp29               1/1     Running     0          42m
-oidcclient-watcher-846894d6d9-nl2vq                     1/1     Running     0          43m
-operand-deployment-lifecycle-manager-6c576c4d46-6k29k   1/1     Running     0          43m
-secret-watcher-64d4b58f4d-jvlkq                         1/1     Running     0          43m
-```
-
-### Prepare operator for DB connection
-
-* Download JDBC drivers to the operator running pod:
-
-  ```sh
-  oc rsh $(oc get po -o name | grep 'cp4a-operator')
-  mkdir /opt/ansible/share/jdbc/postgresql -p && cd "$_"
-
-  curl https://jdbc.postgresql.org/download/postgresql-42.3.0.jar -O
-  ```
-
-
-### Kustomize
-
-Each catalog item has its own README.md for future instructions. Be sure to use the most recent `oc` CLI, 
-see the OpenShift oc download page [here](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/).
-
-1. If not done before be sure to start by adding IBM product catalog to OpenShift
-
-```sh
-oc apply -f ibm-catalog/catalog_source.yaml
-# then cloud pak for automation
-oc apply -k ibm-cp4a-catalog/overlays
-```
-
-1. Create namespace: `oc new-project cp4ba`
-1. Defined a Secret containing the entitlement key is created in the tools namespace.
-
-        ```sh
-        oc new-project cp4ba || true
-        oc create secret docker-registry ibm-entitlement-key -n cp4ba \
-        --docker-username=cp \
-        --docker-password="<entitlement_key>" \
-        --docker-server=cp.icr.io
-        ```
-
-1.To be continued
-
-### Using separate GitOps
-
-You can reference bases for the various tools here in your own kustomize overlay without 
-explicitly cloning this repo, for example:
-
-```yaml
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-
-namespace: product-catalog-cicd
-
-resources:
-- github.com/ibm-cloud-architecture/dba-gitops-catalog/ibm-automation/operator/base/?ref=main
-```
-
-This enables you to patch these resources for your specific environments. 
-Note that none of these bases specify a namespace, in your kustomization overlay 
-you can include the specific namespace you want to install the tool into.
-
+As an example the [dba-infra-gitops](https://github.com/ibm-cloud-architecture/dba-infra-gitops) repository is using scripts,
+OpenShift GitOps to deploy BAW, BAI and ADS.
 
 ## Resources
 

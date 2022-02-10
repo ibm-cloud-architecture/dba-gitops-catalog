@@ -1,0 +1,177 @@
+﻿<mxfile host="65bd71144e">
+    <diagram id="crofGHJXRKBszoS9Q5dw" name="Page-1">
+        <mxGraphModel dx="996" dy="1244" grid="1" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+            <root>
+                <MiscDiagram modelType="MiscDiagram" lastModifiedUserId="dbush@ibm.com" description="" lastModified="2022-01-26T00:33:02Z" _id="miscdiagram_SJZ34nSvt" label="Operational Decision Manager on OCP" id="0">
+                    <mxCell/>
+                </MiscDiagram>
+                <mxCell id="1" parent="0"/>
+                <UserObject placeholders="1" label="10-100 Gi RWO/RWX Storage" Icon-Name="block-storage--alt" id="miscdiagram_SJZ34nSvt_23dySN87yRbD">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1;labelWidth=71;" parent="1" vertex="1">
+                        <mxGeometry x="480" y="640" width="48" height="48" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <mxCell id="miscdiagram_SJZ34nSvt_33dySN87djES" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="48" y="624" width="216" height="112" as="geometry"/>
+                </mxCell>
+                <UserObject placeholders="1" label="Desktop Computer" Icon-Name="screen" id="miscdiagram_SJZ34nSvt_43dySN870Wly">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pn;shapeLayout=collapsed;colorFamily=magenta;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1" parent="1" vertex="1">
+                        <mxGeometry x="57" y="633" width="48" height="48" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <mxCell id="miscdiagram_SJZ34nSvt_53dySN87sP5t" value="Rule Designer Eclipse Plug-in" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="124" y="651" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <UserObject placeholders="1" label="10-100 Gi RWO/RWX Storage" Icon-Name="block-storage--alt" _id="userobject_36gLu0jZ1a0" id="miscdiagram_SJZ34nSvt_63dySN87k7pN">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1;labelWidth=71;" parent="1" vertex="1">
+                        <mxGeometry x="1096" y="336" width="48" height="48" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <mxCell id="miscdiagram_SJZ34nSvt_73dySN87acEP" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=1;entryPerimeter=0;jettySize=auto;orthogonalLoop=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="miscdiagram_SJZ34nSvt_33dySN87djES" target="miscdiagram_SJZ34nSvt_173dySN87Cp1T" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <UserObject placeholders="1" label="DC/DS Database" Icon-Name="data--base" id="miscdiagram_SJZ34nSvt_83dySN87z4KH">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1" parent="1" vertex="1">
+                        <mxGeometry x="376" y="640" width="48" height="48" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="DS schema Database" Icon-Name="data--base" _id="userobject_36h0aT39iPe" id="miscdiagram_SJZ34nSvt_93dySN87zhSb">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1" parent="1" vertex="1">
+                        <mxGeometry x="1000" y="336" width="48" height="48" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <mxCell id="miscdiagram_SJZ34nSvt_103dySN87JS41" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;endArrow=none;endFill=0;" parent="1" source="miscdiagram_SJZ34nSvt_83dySN87z4KH" target="miscdiagram_SJZ34nSvt_173dySN87Cp1T" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="400" y="512"/>
+                            <mxPoint x="160" y="512"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="miscdiagram_SJZ34nSvt_113dySN87aalO" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;" parent="1" source="miscdiagram_SJZ34nSvt_83dySN87z4KH" target="miscdiagram_SJZ34nSvt_183dySN870aCZ" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="400" y="336"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <UserObject placeholders="1" label="DS Database" Icon-Name="data--base" _id="userobject_36tToe7MxoT" id="miscdiagram_SJZ34nSvt_123dySN87ktsT">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1" parent="1" vertex="1">
+                        <mxGeometry x="608" y="640" width="48" height="48" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <mxCell id="miscdiagram_SJZ34nSvt_133dySN87sg7q" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;endArrow=none;endFill=0;" parent="1" source="miscdiagram_SJZ34nSvt_123dySN87ktsT" target="miscdiagram_SJZ34nSvt_223dySN87LyMo" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="568" y="664"/>
+                            <mxPoint x="568" y="192"/>
+                            <mxPoint x="456" y="192"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="miscdiagram_SJZ34nSvt_143dySN87ViXj" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;exitX=0.4;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="miscdiagram_SJZ34nSvt_93dySN87zhSb" target="miscdiagram_SJZ34nSvt_293dySN87xxvy" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1019" y="144"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <UserObject placeholders="1" label="&lt;span style=&quot;font-family: &amp;#34;ibm plex sans&amp;#34;&quot;&gt;OpenShift 4.7-4.8 Dev Cluster&lt;/span&gt;" Icon-Name="logo--openshift" id="miscdiagram_SJZ34nSvt_153dySN87Wu5e">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;strokeWidth=1;html=1;whiteSpace=wrap;metaEdit=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans SmBld;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=16;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="1" vertex="1">
+                        <mxGeometry x="16" y="16" width="800" height="416" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="ODM Dev Namespace" Icon-Name="border--none" id="miscdiagram_SJZ34nSvt_163dySN87RsYQ">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_153dySN87Wu5e" vertex="1">
+                        <mxGeometry x="16" y="51" width="320" height="349" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Decision Center" Icon-Name="cube" id="miscdiagram_SJZ34nSvt_173dySN87Cp1T">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_163dySN87RsYQ" vertex="1">
+                        <mxGeometry x="9" y="268" width="144" height="68" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Decision Server Runtime" Icon-Name="cube" _id="userobject_32UdcglKTdE" id="miscdiagram_SJZ34nSvt_183dySN870aCZ">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_163dySN87RsYQ" vertex="1">
+                        <mxGeometry x="9" y="192" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Decision Runner" Icon-Name="cube" _id="userobject_3665TlVw5yO" id="miscdiagram_SJZ34nSvt_193dySN878i7e">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_163dySN87RsYQ" vertex="1">
+                        <mxGeometry x="11" y="120" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Decision Server Console" Icon-Name="cube" _id="userobject_36gLhacHONI" id="miscdiagram_SJZ34nSvt_203dySN87lHWO">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_163dySN87RsYQ" vertex="1">
+                        <mxGeometry x="11" y="48" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="ODM Stage Namespace" Icon-Name="border--none" _id="userobject_36LwldoxJTy" id="miscdiagram_SJZ34nSvt_213dySN873f0Y">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_153dySN87Wu5e" vertex="1">
+                        <mxGeometry x="352" y="51" width="192" height="205" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Decision Server Runtime" Icon-Name="cube" _id="userobject_36LwldpqGJx" id="miscdiagram_SJZ34nSvt_223dySN87LyMo">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_213dySN873f0Y" vertex="1">
+                        <mxGeometry x="16" y="48" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Decision Server Console" Icon-Name="cube" _id="userobject_36Lwldpt7G8" id="miscdiagram_SJZ34nSvt_233dySN87sC2I">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_213dySN873f0Y" vertex="1">
+                        <mxGeometry x="16" y="133" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Application Namespace" Icon-Name="border--none" id="miscdiagram_SJZ34nSvt_243dySN87PMp0">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_153dySN87Wu5e" vertex="1">
+                        <mxGeometry x="560" y="51" width="224" height="189" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="App with Embedded Rules" Icon-Name="cube" _id="userobject_364tx5ubr6u" id="miscdiagram_SJZ34nSvt_253dySN87tk2w">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_243dySN87PMp0" vertex="1">
+                        <mxGeometry x="16" y="112" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="App Calling Rules API" Icon-Name="cube" _id="userobject_365ESUdfBAx" id="miscdiagram_SJZ34nSvt_263dySN87Vpka">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_243dySN87PMp0" vertex="1">
+                        <mxGeometry x="16" y="41" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="&lt;span style=&quot;font-family: &amp;#34;ibm plex sans&amp;#34;&quot;&gt;OpenShift 4.7-4.8 Prod Cluster&lt;/span&gt;" Icon-Name="logo--openshift" id="miscdiagram_SJZ34nSvt_273dySN87TOSP">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;strokeWidth=1;html=1;whiteSpace=wrap;metaEdit=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans SmBld;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=16;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="1" vertex="1">
+                        <mxGeometry x="832" y="16" width="456" height="264" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="ODM Namespace" Icon-Name="border--none" _id="userobject_364sGXJ9f9r" id="miscdiagram_SJZ34nSvt_283dySN87s8qD">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_273dySN87TOSP" vertex="1">
+                        <mxGeometry x="16" y="48" width="184" height="201" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Decision Server Runtime" Icon-Name="cube" _id="userobject_32UdcglKTdE" id="miscdiagram_SJZ34nSvt_293dySN87xxvy">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_283dySN87s8qD" vertex="1">
+                        <mxGeometry x="16" y="48" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Decision Server Console" Icon-Name="cube" _id="userobject_36gZwL3k1Lv" id="miscdiagram_SJZ34nSvt_303dySN87Fz8j">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_283dySN87s8qD" vertex="1">
+                        <mxGeometry x="16" y="124" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Application Namespace" Icon-Name="border--none" id="miscdiagram_SJZ34nSvt_313dySN87yKOG">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_273dySN87TOSP" vertex="1">
+                        <mxGeometry x="216" y="48" width="223" height="193" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="App with Embedded Rules" Icon-Name="cube" _id="userobject_364tx5ubr6u" id="miscdiagram_SJZ34nSvt_323dySN87Ylsu">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_313dySN87yKOG" vertex="1">
+                        <mxGeometry x="16" y="112" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="App Calling Rules API" Icon-Name="cube" _id="userobject_365ESUdfBAx" id="miscdiagram_SJZ34nSvt_333dySN87bb3E">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJZ34nSvt_313dySN87yKOG" vertex="1">
+                        <mxGeometry x="16" y="41" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

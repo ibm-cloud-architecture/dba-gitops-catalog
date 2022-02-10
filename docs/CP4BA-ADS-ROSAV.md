@@ -181,7 +181,7 @@ https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_micros
 
 https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_getting_started_prereqs.html
 
- The service should be installed in the same VPC as ROSA and should have tow instance deployed in two subnets / Azs . 
+The service should be installed in the same VPC as ROSA and should have tow instance deployed in two subnets / Azs . 
 
 ####  Installing Document DB Service 
 
