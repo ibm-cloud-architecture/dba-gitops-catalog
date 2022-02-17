@@ -1,25 +1,25 @@
-# Digital Business Automation Solution gitOps catalog
+# Business Automation Solution GitOps catalog
 
-Updated 2/2/22
+Updated: 2022-02-02
 
 [GitOps](https://www.redhat.com/en/topics/devops/what-is-gitops) is a set of practices to manage infrastructure and application configurations using Git.
 GitOps works by using Git as a single source of truth for declarative infrastructure and applications.
-GitOps uses Git pull requests to manage infrastructure provisioning and deployment automatically. 
+GitOps uses Git pull requests to manage infrastructure provisioning and deployment automatically.
 The Git repository contains the entire state of the system so that the trail of changes to the system state is visible and auditable.
 
 ## Overview
 
-This GitOps Catalog includes [kustomize](http://kustomize.io) base and overlays folders for a 
+This GitOps Catalog includes [kustomize](http://kustomize.io) base and overlays folders for a
 number of OpenShift operators needed to deploy IBM Cloud Pak for Business Automation products.
 This repository is using the same catalog structure as introduced by Red Hat COP team in [this repository](https://github.com/redhat-cop/gitops-catalog).
 
-This repository define Operator subscriptions for the different IBM Cloud Pak for Automation product release starting for 2021.3 or Q4 release.
+This repository define Operator subscriptions for the different IBM Cloud Pak for Business Automation product release starting for 2021.3 or Q4 release.
 
-Cloud Pak for Automation has a set of different capabilities that could be presented in the following figure:
+Cloud Pak for Business Automation has a set of different capabilities that could be presented in the following figure:
 
-![](./docs/images/CP4Automation-capabilities.png)
+![](./docs/images/CP4BA-capabilities.png)
 
-(src for this diagram: [docs/diagrams/CP4Automation-capabilities.drawio](./docs/diagrams/CP4Automation-capabilities.drawio))
+(src for this diagram: [docs/diagrams/CP4BA-capabilities.drawio](./docs/diagrams/CP4Automation-capabilities.drawio))
 
 To support those capabilities, different operators may be deployed to an OpenShift cluster:
 
@@ -32,7 +32,7 @@ This is an example of such operators visible within the OpenShift console
 ![](./docs/images/OCPconsole-baoperators.png)
 
 
-* **IBM® Automation Foundation Core**: 
+* **IBM® Automation Foundation Core**:
 
     * RPA-driven automation, process mining, mongoDB for Identity and Access Management (IAM), metering, OpenID,..  Zen UI.
 
@@ -41,20 +41,19 @@ This is an example of such operators visible within the OpenShift console
 * **Cloud Pak for Business Automation** includes Business Automation Studio and Business Automation Navigator to provide a unified authoring environment and an entry point to various low-code design tools with a single sign-on (SSO) experience and team management.
 
 
-Once those operators are installed, the way operands will be added will depend on the 
-different products to install
-and if they are shared between developer teams or not. 
+Once those operators are installed, the way operands will be added will depend on the
+different products to install and if they are shared between developer teams or not.
 
 The installation of the Cloud Pak for Business Automation operator will also install dependent ones.
 
-Read this [important note](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=deployment-capabilities-starter-deployments) on reelationship between capabilities and operators. 
+Read this [important note](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=deployment-capabilities-starter-deployments) on the relationship between capabilities and operators.
 
 Depending on the selected capabilities, the needed components of the foundation are installed. The final custom resource file combines capabilities and components from one or more capabilities.
 
 A deployment of the Cloud Pak custom resource also includes an instance of IBM Automation foundation and the IBM Cloud Pak foundational services. Depending on the capabilities that you select, the dependency operators create the service instances.
 
 
-### Common services
+### Common Services
 
 Installing most of those operators will create Foundational service instances like in the following figure:
 
@@ -62,107 +61,38 @@ Installing most of those operators will create Foundational service instances li
 
 (src for this diagram: [docs/diagrams/Foundational_Services_on_OCP.drawio](./docs/diagrams/Foundational_Services_on_OCP.drawio))
 
-### BAW example
+### Business Automation Workflow (BAW) example
 
-If we want to develop process applications, we will have the Automation Studio deployed in one namespace and then 
-the process servers and other runtimes in the different environment namespaces (dev, staging):
+If we want to develop process applications, we will have the Automation Studio deployed in one namespace and then the workflow server and other runtimes in the different environment namespaces (dev, staging):
 
 ![](./docs/images/BAW_BAI.png)
 
 (src for this diagram: [docs/diagrams/Business_Automation_WorkflowOCP.drawio](./docs/diagrams/Business_Automation_WorkflowOCP.drawio))
 
-This GitOps Catalog defines the operator only. The [infra gitOps repository](https://github.com/ibm-cloud-architecture/dba-infra-gitops) defines 
-custom resources for runtime  and authoring component deployments.
+This GitOps Catalog defines the operator only. The [infra gitOps repository](https://github.com/ibm-cloud-architecture/dba-infra-gitops) defines
+custom resources for runtime and authoring component deployments.
 
-### Automation Decision Servicee on AWS - ROSA
+### Automation Decision Services on AWS - ROSA
 
-[See the detailed article to deploy Cloud Pak for Automation and ADS on AWS  Managed RedHat OpenShift ROSA here](./docs/CP4BA-ADS-ROSAV.md)
+See the detailed article to deploy Cloud Pak for Business Automation and ADS on AWS Managed Red Hat OpenShift ROSA [here](./docs/CP4BA-ADS-ROSAV.md)
 
 ## Reuse diagrams and images
 
-The [docs/diagrams](https://github.com/ibm-cloud-architecture/dba-gitops-catalog/tree/main/docs/diagrams) folder includes all reusable diagrams that can be used to present reference architecture and deployment.
+Head to the [docs readme](https://github.com/ibm-cloud-architecture/dba-gitops-catalog/tree/main/docs/README.md) for information on the draw.io diagrams and images that can be used immediately and customized for your needs.
 
-To be able to update those diagrams you can use [draw.io on your desktop](https://github.com/jgraph/drawio-desktop/releases), 
-or use [VScode](https://code.visualstudio.com/) with the drawio extension.
-
-The IBM stencils can be found in [this website](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils/releases).
-
-Each of those diagrams were exported to the [images folder](https://github.com/ibm-cloud-architecture/dba-gitops-catalog/tree/main/docs/images) so can be reused in any presentation.
-
-
-### Golden topology for OpenShift
-
-![](./docs/images/gold.png)
-
-### OpenShift High Availability deployment
-
-![](./docs/images/OCP_HA.png)
-
-### Disaster recovery with Persistence Volume duplication
-
-![](./docs/images/DR_with_PV_Duplication.png)
-
-### Disaster recovery with passive data center
-
-![](./docs/images/DR_CP4BA_Config_with_Passive_DC_AZ.png)
-
-![](./docs/images/DR_Containerized_DB_with_Tunnel.png)
-
-![](./docs/images/DR_3_AZ_with_Containerized_DB.png)
-
-### Business Automation Workflow deployment on OCP
+### Example diagram: Business Automation Workflow (BAW) deployment on OpenShift Container Platform (OCP)
 
 ![](./docs/images/Business_Automation_WorkflowOCP.png)
-
-### Automation Workstream deployment on OCP
-
-![](./docs/images/Automation_Workstream_Service_on_OCP.png)
-
-### Business Automation Application deployment on OCP
-
-![](./docs/images/Business_Automation_Application_on_OCP.png)
-
-### Content management deployment
-
-![](./docs/images/FNCM_on_OCP_K8s.png)
-
-### Automation decision service deployment
-
-![](./docs/images/Automation_Decision_Services_on_OCP.png)
-
-### Operational Decision Manager deployment on OpenShift
-
-![](./docs/images/Operational_Decision_Manager_on_OCP.png)
-
-### Automation document processing deployment
-
-![](./docs/images/Automation_Document_Processing_on_OCP.png)
-
-![](./docs/images/Automation_Document_Processing_on_OCP2.png)
-
-
-### Process mining deployment on OpenShift
-
-![](./docs/images/Process_Mining_on_OCP.png)
-
-### Robotic Process Automation deployment on OpenShift
-
-![](./docs/images/RPA_on_OCP.png)
-
-
-### Robotic Process Automation deployment on Windows
-
-![](./docs/images/RPA_on_Windows.png)
 
 ## Setting up a cluster
 
 In this section we will present how to jumpstart the operators deployment
 
-### Pre-requisites
+### Prerequisites
 
 #### On your laptop
 
-* git client, oc CLI, podman or docker CLIs, with unzip tool.
+* git client, oc CLI, podman or docker CLIs, with unzip tool
 * Get this repository for the scripts and Custom Resources
 
 ```sh
@@ -171,39 +101,39 @@ git clone https://github.com/ibm-cloud-architecture/dba-gitops-catalog.git
 
 #### Red Hat OpenShift  
 
-* Get a running OpenShift v4.7+ cluster with enough resources to deploy cloud pak for automation. 
+* Get a running OpenShift v4.7+ cluster with enough resources to deploy cloud pak for automation.
 A cluster will all capabilities need 11 nodes (see [system requirements](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=ppd-system-requirements)):
 
-   * Master (3 nodes): 4 vCPU and 8 Gi memory on each node.
-   * Worker (8 nodes): 16 vCPU and 32 Gi memory on each node.
+   * Master (3 nodes): 4 vCPU and 8 GB memory on each node.
+   * Worker (8 nodes): 16 vCPU and 32 GB memory on each node.
 
 * Be sure to have the cluster using Network Time Protocol by setting [a chrony time service](https://www.ibm.com/docs/en/openshift?source=https%3A%2F%2Fdocs.openshift.com%2Fcontainer-platform%2F4.7%2Finstalling%2Finstall_config%2Finstalling-customizing.html%23installation-special-config-chrony_installing-customizing&referrer=SSYHZ8_21.0.x%2Fcom.ibm.dba.install%2Fop_topics%2Ftsk_preparing_demo.html).
 
-For demo purpose, a three nodes cluster should be enough ( 32 CPUs and 64Gi RAM (e.g., flavor c3c.32x64 on ROKS)). See this [set of questions](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=deployments-quick-reference-qa-demo)
+For demo purpose, a three nodes cluster should be enough (32 CPUs and 64 GB RAM, for example flavor c3c.32x64 on ROKS). See this [set of questions](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=deployments-quick-reference-qa-demo)
 to review.
 
 #### Active Directory
 
-For production deployment, you need a LDAP server accessible from the OpenShift cluster. For demonstration purpose, Cloud Pak for Automation starter configuration uses OpenLDAP.
+For production deployment, you need a LDAP server accessible from the OpenShift cluster. For demonstration purpose, Cloud Pak for Business Automation starter configuration uses OpenLDAP.
 
 #### IBM Entitlement Key
 
 The IBM Entitlement Key is required to pull IBM Cloud Pak specific container images from the IBM Entitled Registry. To get an entitlement key,
 
 * Log in to MyIBM Container Software Library with an IBMid and password associated with the entitled software. See
-[https://www.ibm.com/docs/en/cloud-paks/1.0?topic=clusters-obtaining-your-entitlement-key](https://www.ibm.com/docs/en/cloud-paks/1.0?topic=clusters-obtaining-your-entitlement-key) 
+[https://www.ibm.com/docs/en/cloud-paks/1.0?topic=clusters-obtaining-your-entitlement-key](https://www.ibm.com/docs/en/cloud-paks/1.0?topic=clusters-obtaining-your-entitlement-key)
 
     1. Select the View library option to verify your entitlement(s).
     1. Select the Get entitlement key to retrieve the key, place it in a file called `./assets/entitlement_key.text`
     1. Enter the email address used to generate the entitlement key in a file called `./assets/ibm_email.text`
-    
+
 
 ## Deploy a solution
 
 Each solution will deploy the different IBM Automation components according to their requirements.
 
 As an example the [dba-infra-gitops](https://github.com/ibm-cloud-architecture/dba-infra-gitops) repository is using scripts,
-OpenShift GitOps to deploy BAW, BAI and ADS.
+OpenShift GitOps to deploy Business Automation Workflow (BAW), Business Automation Insights (BAI), and Automation Decision Services (ADS).
 
 ## Resources
 
