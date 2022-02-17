@@ -13,62 +13,62 @@ What's should you do next?
 
 ### Golden topology for OpenShift
 
-![](./docs/images/gold.png)
+![](./images/gold.png)
 
 ### OpenShift High Availability deployment
 
-![](./docs/images/OCP_HA.png)
+![](./images/OCP_HA.png)
 
 ### Disaster recovery with Persistence Volume duplication
 
-![](./docs/images/DR_with_PV_Duplication.png)
+![](./images/DR_with_PV_Duplication.png)
 
 ### Disaster recovery with passive data center
 
-![](./docs/images/DR_CP4BA_Config_with_Passive_DC_AZ.png)
+![](./images/DR_CP4BA_Config_with_Passive_DC_AZ.png)
 
-![](./docs/images/DR_Containerized_DB_with_Tunnel.png)
+![](./images/DR_Containerized_DB_with_Tunnel.png)
 
-![](./docs/images/DR_3_AZ_with_Containerized_DB.png)
+![](./images/DR_3_AZ_with_Containerized_DB.png)
 
 ### Business Automation Workflow deployment on OCP
 
-![](./docs/images/Business_Automation_WorkflowOCP.png)
+![](./images/Business_Automation_WorkflowOCP.png)
 
 ### Automation Workstream deployment on OCP
 
-![](./docs/images/Automation_Workstream_Service_on_OCP.png)
+![](./images/Automation_Workstream_Service_on_OCP.png)
 
 ### Business Automation Application deployment on OCP
 
-![](./docs/images/Business_Automation_Application_on_OCP.png)
+![](./images/Business_Automation_Application_on_OCP.png)
 
 ### Content management deployment
 
-![](./docs/images/FNCM_on_OCP_K8s.png)
+![](./images/FNCM_on_OCP_K8s.png)
 
 ### Automation decision service deployment
 
-![](./docs/images/Automation_Decision_Services_on_OCP.png)
+![](./images/Automation_Decision_Services_on_OCP.png)
 
 ### Operational Decision Manager deployment on OpenShift
 
-![](./docs/images/Operational_Decision_Manager_on_OCP.png)
+![](./images/Operational_Decision_Manager_on_OCP.png)
 
 ### Automation document processing deployment
 
-![](./docs/images/Automation_Document_Processing_on_OCP.png)
+![](./images/Automation_Document_Processing_on_OCP.png)
 
-![](./docs/images/Automation_Document_Processing_on_OCP2.png)
+![](./images/Automation_Document_Processing_on_OCP2.png)
 
 ### Process mining deployment on OpenShift
 
-![](./docs/images/Process_Mining_on_OCP.png)
+![](./images/Process_Mining_on_OCP.png)
 
 ### Robotic Process Automation deployment on OpenShift
 
-![](./docs/images/RPA_on_OCP.png)
+![](./images/RPA_on_OCP.png)
 
 ### Robotic Process Automation deployment on Windows
 
-![](./docs/images/RPA_on_Windows.png)
+![](./images/RPA_on_Windows.png)
