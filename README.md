@@ -34,7 +34,11 @@ This is an example of such operators visible within the OpenShift console
 
 * **IBM® Automation Foundation Core**:
 
-    * RPA-driven automation, process mining, mongoDB for Identity and Access Management (IAM), metering, OpenID,..  Zen UI.
+    * RPA-driven automation
+    * process mining
+    * mongoDB for Identity and Access Management (IAM)
+    * metering, OpenID,..  
+    * Zen UI.
 
 * **Cloud Pak foundational services**: (bedrock - common services) [Product doc](https://www.ibm.com/docs/en/cpfs). It includes IAM and certificate management.
 * **IBM® Automation Insights foundation** operator installs the required dependency operators, such as the IBM Events Operator, the Elasticsearch Operator and the Event Processing Operator.
@@ -42,15 +46,11 @@ This is an example of such operators visible within the OpenShift console
 
 
 Once those operators are installed, the way operands will be added will depend on the
-different products to install and if they are shared between developer teams or not.
-
-The installation of the Cloud Pak for Business Automation operator will also install dependent ones.
+different products (capabilities) to install and if they are shared between developer teams or not.
 
 Read this [important note](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.3?topic=deployment-capabilities-starter-deployments) on the relationship between capabilities and operators.
 
 Depending on the selected capabilities, the needed components of the foundation are installed. The final custom resource file combines capabilities and components from one or more capabilities.
-
-A deployment of the Cloud Pak custom resource also includes an instance of IBM Automation foundation and the IBM Cloud Pak foundational services. Depending on the capabilities that you select, the dependency operators create the service instances.
 
 
 ### Common Services
@@ -86,7 +86,7 @@ Head to the [docs readme](https://github.com/ibm-cloud-architecture/dba-gitops-c
 
 ## Setting up a cluster
 
-In this section we will present how to jumpstart the operators deployment
+In this section we will present how to bootstrap the operators deployment
 
 ### Prerequisites
 
