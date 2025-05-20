@@ -1,6 +1,6 @@
 ﻿<mxfile host="65bd71144e">
     <diagram id="kj-Y_orn4XiNJi2F5IpZ" name="Page-1">
-        <mxGraphModel dx="448" dy="560" grid="1" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="809" dy="511" grid="1" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
             <root>
                 <MiscDiagram modelType="MiscDiagram" lastModifiedUserId="dbush@ibm.com" description="" lastModified="2022-01-25T15:52:26Z" _id="miscdiagram_BkNc6foVF" label="Automation Workstream Service on OCP" id="0">
                     <mxCell/>
@@ -50,7 +50,7 @@
                         <mxGeometry x="16" y="270" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Process Federation Server" Icon-Name="cube" _id="userobject_32UdcglKTdE" id="miscdiagram_BkNc6foVF_123dyQikTcMEC">
+                <UserObject placeholders="1" label="Workflow Server" Icon-Name="cube" _id="userobject_32UdcglKTdE" id="miscdiagram_BkNc6foVF_123dyQikTcMEC">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_BkNc6foVF_103dyQikT4vjw" vertex="1">
                         <mxGeometry x="16" y="48" width="144" height="64" as="geometry"/>
                     </mxCell>
@@ -65,7 +65,7 @@
                         <mxGeometry x="16" y="344" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Workflow Server" Icon-Name="cube" _id="userobject_3apTetU41YI" id="miscdiagram_BkNc6foVF_153dyQikTz5Rn">
+                <UserObject placeholders="1" label="Process Federation Server (opt)" Icon-Name="cube" _id="userobject_3apTetU41YI" id="miscdiagram_BkNc6foVF_153dyQikTz5Rn">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_BkNc6foVF_103dyQikT4vjw" vertex="1">
                         <mxGeometry x="16" y="120" width="144" height="64" as="geometry"/>
                     </mxCell>
@@ -85,7 +85,7 @@
                         <mxGeometry x="16" y="270" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Process Federation Server" Icon-Name="cube" _id="userobject_32UdcglKTdE" id="miscdiagram_BkNc6foVF_193dyQikTSk8L">
+                <UserObject placeholders="1" label="Workflow Server" Icon-Name="cube" _id="userobject_32UdcglKTdE" id="miscdiagram_BkNc6foVF_193dyQikTSk8L">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_BkNc6foVF_173dyQikTkaoR" vertex="1">
                         <mxGeometry x="16" y="48" width="144" height="64" as="geometry"/>
                     </mxCell>
@@ -100,7 +100,7 @@
                         <mxGeometry x="16" y="344" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Workflow Server" Icon-Name="cube" _id="userobject_3apTetU41YI" id="miscdiagram_BkNc6foVF_223dyQikT9ykJ">
+                <UserObject placeholders="1" label="Process Federation Server (opt)" Icon-Name="cube" _id="userobject_3apTetU41YI" id="miscdiagram_BkNc6foVF_223dyQikT9ykJ">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_BkNc6foVF_173dyQikTkaoR" vertex="1">
                         <mxGeometry x="16" y="120" width="144" height="64" as="geometry"/>
                     </mxCell>
@@ -125,7 +125,7 @@
                         <mxGeometry x="16" y="270" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Process Federation Server" Icon-Name="cube" _id="userobject_32UdcglKTdE" id="miscdiagram_BkNc6foVF_273dyQikTa22v">
+                <UserObject placeholders="1" label="Workflow Server" Icon-Name="cube" _id="userobject_32UdcglKTdE" id="miscdiagram_BkNc6foVF_273dyQikTa22v">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_BkNc6foVF_253dyQikTaDvy" vertex="1">
                         <mxGeometry x="16" y="48" width="144" height="64" as="geometry"/>
                     </mxCell>
@@ -140,7 +140,7 @@
                         <mxGeometry x="16" y="344" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Workflow Server" Icon-Name="cube" _id="userobject_3apTetU41YI" id="miscdiagram_BkNc6foVF_303dyQikT6r1n">
+                <UserObject placeholders="1" label="Process Federation Server (opt)" Icon-Name="cube" _id="userobject_3apTetU41YI" id="miscdiagram_BkNc6foVF_303dyQikT6r1n">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_BkNc6foVF_253dyQikTaDvy" vertex="1">
                         <mxGeometry x="16" y="120" width="144" height="64" as="geometry"/>
                     </mxCell>

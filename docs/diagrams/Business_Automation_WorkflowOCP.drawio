@@ -1,6 +1,6 @@
 ﻿<mxfile host="65bd71144e">
     <diagram id="n7cRyCmh6ItZVgxvmuYI" name="Page-1">
-        <mxGraphModel dx="587" dy="400" grid="1" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="734" dy="507" grid="1" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
             <root>
                 <MiscDiagram modelType="MiscDiagram" lastModifiedUserId="dbush@ibm.com" description="" lastModified="2022-01-25T23:59:19Z" _id="miscdiagram_B1mi-XiVt" label="Business Automation Workflow on OCP" id="0">
                     <mxCell/>
@@ -29,11 +29,19 @@
                 <mxCell id="miscdiagram_B1mi-XiVt_123dyQNuRwhRd" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.25;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="miscdiagram_B1mi-XiVt_363dyQNuRBiuD" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="851" y="673" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="851" y="623"/>
+                            <mxPoint x="850" y="623"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="miscdiagram_B1mi-XiVt_133dyQNuRwoWk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="miscdiagram_B1mi-XiVt_363dyQNuRBiuD" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1015" y="673" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="1015" y="623"/>
+                            <mxPoint x="1014" y="623"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="2" value="OpenShift Cluster 4.7-4.8 Non Prod" style="swimlane;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
@@ -54,7 +62,7 @@
                         <mxGeometry x="16" y="115.5" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Process Federation Server" Icon-Name="cube" _id="userobject_36y3cLvsVA0" id="miscdiagram_B1mi-XiVt_263dyQNuRanNm">
+                <UserObject placeholders="1" label="Process Federation Server (opt)" Icon-Name="cube" _id="userobject_36y3cLvsVA0" id="miscdiagram_B1mi-XiVt_263dyQNuRanNm">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_233dyQNuR5TzZ" vertex="1">
                         <mxGeometry x="16" y="187.5" width="144" height="64" as="geometry"/>
                     </mxCell>
@@ -94,17 +102,17 @@
                         <mxGeometry x="168" y="188" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Elasticsearch" Icon-Name="cube" _id="userobject_36y3cLwUjYT" id="miscdiagram_B1mi-XiVt_343dyQNuRgBMq">
+                <UserObject placeholders="1" label="Opensearch" Icon-Name="cube" _id="userobject_36y3cLwUjYT" id="miscdiagram_B1mi-XiVt_343dyQNuRgBMq">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_233dyQNuR5TzZ" vertex="1">
                         <mxGeometry x="168" y="115.5" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <mxCell id="15" value="cp4a namespace" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" parent="2" vertex="1">
-                    <mxGeometry x="8" y="192" width="328" height="336" as="geometry"/>
+                    <mxGeometry x="8" y="160" width="328" height="368" as="geometry"/>
                 </mxCell>
                 <UserObject placeholders="1" label="Business Automation Navigator" Icon-Name="cube" _id="userobject_36xxOpgz7oH" id="miscdiagram_B1mi-XiVt_183dyQNuRCdp0">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="2" vertex="1">
-                        <mxGeometry x="22" y="233" width="138" height="64" as="geometry"/>
+                        <mxGeometry x="22" y="192" width="299" height="32" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject placeholders="1" label="Business Automation Studio" Icon-Name="cube" _id="userobject_36xzUgNaQta" id="miscdiagram_B1mi-XiVt_203dyQNuRJsQD">
@@ -119,7 +127,7 @@
                 </UserObject>
                 <UserObject placeholders="1" label="Workflow Server" Icon-Name="cube" id="miscdiagram_B1mi-XiVt_163dyQNuR74nw">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="2" vertex="1">
-                        <mxGeometry x="21" y="304" width="144" height="64" as="geometry"/>
+                        <mxGeometry x="21" y="232" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject placeholders="1" label="Content Platform Engine" Icon-Name="cube" _id="userobject_36xA98gBrEq" id="miscdiagram_B1mi-XiVt_213dyQNuRk7iZ">
@@ -129,12 +137,22 @@
                 </UserObject>
                 <UserObject placeholders="1" label="JMS" Icon-Name="cube" _id="userobject_36xAfdTrJis" id="miscdiagram_B1mi-XiVt_223dyQNuR4viP">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="2" vertex="1">
-                        <mxGeometry x="22" y="376" width="144" height="64" as="geometry"/>
+                        <mxGeometry x="21" y="448" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <UserObject placeholders="1" label="Resource Registry" Icon-Name="cube" _id="userobject_36xxV5GtFeF" id="miscdiagram_B1mi-XiVt_193dyQNuRiL15">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="2" vertex="1">
-                        <mxGeometry x="96" y="448" width="144" height="64" as="geometry"/>
+                        <mxGeometry x="177" y="448" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Process Federation Server (opt)" Icon-Name="cube" _id="userobject_36y3cLvsVA0" id="35">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" vertex="1" parent="2">
+                        <mxGeometry x="21" y="304" width="144" height="64" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject placeholders="1" label="Opensearch" Icon-Name="cube" _id="userobject_36y3cLwUjYT" id="36">
+                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" vertex="1" parent="2">
+                        <mxGeometry x="21" y="376" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <mxCell id="3" value="OpenShift Cluster 4.7-4.8 Prod" style="swimlane;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
@@ -155,7 +173,7 @@
                         <mxGeometry x="16" y="64" width="144" height="35.5" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Process Federation Server" Icon-Name="cube" _id="userobject_3aq1Apy78M6" id="miscdiagram_B1mi-XiVt_393dyQNuRI2Vs">
+                <UserObject placeholders="1" label="Process Federation Server (opt)" Icon-Name="cube" _id="userobject_3aq1Apy78M6" id="miscdiagram_B1mi-XiVt_393dyQNuRI2Vs">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_363dyQNuRBiuD" vertex="1">
                         <mxGeometry x="16" y="107.5" width="144" height="64" as="geometry"/>
                     </mxCell>
@@ -195,37 +213,37 @@
                         <mxGeometry x="168" y="108" width="144" height="64" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <UserObject placeholders="1" label="Elasticsearch" Icon-Name="cube" _id="userobject_3aq1Apzbwc4" id="miscdiagram_B1mi-XiVt_473dyQNuRft76">
+                <UserObject placeholders="1" label="Opensearch" Icon-Name="cube" _id="userobject_3aq1Apzbwc4" id="miscdiagram_B1mi-XiVt_473dyQNuRft76">
                     <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_B1mi-XiVt_363dyQNuRBiuD" vertex="1">
                         <mxGeometry x="168" y="64" width="144" height="35.5" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <mxCell id="27" value="openshift-operators" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;" vertex="1" parent="3">
+                <mxCell id="27" value="openshift-operators" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;" parent="3" vertex="1">
                     <mxGeometry x="32" y="26" width="328" height="107" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" value="cp4ba-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
-                    <mxGeometry x="40" y="53" width="88" height="31" as="geometry"/>
+                <mxCell id="28" value="cp4ba-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="40" y="53" width="96" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="AFI-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
-                    <mxGeometry x="136" y="53" width="80" height="31" as="geometry"/>
+                <mxCell id="29" value="AFI-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="144" y="53" width="96" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="wps-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
-                    <mxGeometry x="224" y="53" width="80" height="31" as="geometry"/>
+                <mxCell id="30" value="wps-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="248" y="53" width="96" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="foundational services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
-                    <mxGeometry x="40" y="93" width="80" height="31" as="geometry"/>
+                <mxCell id="31" value="foundational services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="40" y="93" width="96" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="foundation core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
-                    <mxGeometry x="136" y="93" width="80" height="31" as="geometry"/>
+                <mxCell id="32" value="foundation core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="144" y="93" width="96" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="Automation foundation&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="3">
-                    <mxGeometry x="224" y="93" width="80" height="31" as="geometry"/>
+                <mxCell id="33" value="Automation foundation&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="248" y="93" width="96" height="31" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="RDB&lt;br&gt;DB2 PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
-                    <mxGeometry x="51" y="664" width="60" height="80" as="geometry"/>
+                    <mxGeometry x="68" y="664" width="60" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="75Gi&lt;br&gt;RWX / RWO&lt;br&gt;Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
-                    <mxGeometry x="216" y="664" width="60" height="80" as="geometry"/>
+                    <mxGeometry x="232" y="664" width="60" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="RDB&lt;br&gt;DB2 PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
                     <mxGeometry x="438" y="664" width="60" height="80" as="geometry"/>
@@ -239,26 +257,26 @@
                 <mxCell id="11" value="75Gi&lt;br&gt;RWX / RWO&lt;br&gt;Storage" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
                     <mxGeometry x="988.5" y="664" width="60" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="openshift-operators" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;" vertex="1" parent="1">
-                    <mxGeometry x="16" y="61" width="328" height="107" as="geometry"/>
+                <mxCell id="20" value="openshift-operators" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="16" y="61" width="328" height="115" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="cp4ba-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="24" y="88" width="88" height="31" as="geometry"/>
+                <mxCell id="21" value="cp4ba-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="24" y="88" width="104" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="AFI-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="120" y="88" width="80" height="31" as="geometry"/>
+                <mxCell id="22" value="AFI-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="136" y="88" width="104" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value="wps-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="208" y="88" width="80" height="31" as="geometry"/>
+                <mxCell id="23" value="wps-operator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="248" y="88" width="88" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="foundational services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="24" y="128" width="80" height="31" as="geometry"/>
+                <mxCell id="24" value="foundational services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="24" y="128" width="104" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="25" value="foundation core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="120" y="128" width="80" height="31" as="geometry"/>
+                <mxCell id="25" value="foundation core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="136" y="128" width="104" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="26" value="Automation foundation&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-                    <mxGeometry x="208" y="128" width="80" height="31" as="geometry"/>
+                <mxCell id="26" value="Automation foundation&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="248" y="128" width="88" height="31" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
