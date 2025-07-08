@@ -1,274 +1,527 @@
-﻿<mxfile host="65bd71144e">
-    <diagram id="XcWLXu15TUP_7ZAjLiGf" name="Page-1">
-        <mxGraphModel dx="594" dy="560" grid="1" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
-            <root>
-                <MiscDiagram modelType="MiscDiagram" lastModifiedUserId="dbush@ibm.com" description="" lastModified="2022-01-25T15:43:50Z" _id="miscdiagram_SJRMSpBDt" label="Automation Document Processing on OCP" id="0">
-                    <mxCell/>
-                </MiscDiagram>
-                <mxCell id="1" parent="0"/>
-                <UserObject placeholders="1" label="64 Gi RWX Storage" Icon-Name="block-storage--alt" id="miscdiagram_SJRMSpBDt_23dyQ8eQTulz">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1;labelWidth=71;" parent="1" vertex="1">
-                        <mxGeometry x="174" y="1057" width="48" height="48" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <mxCell id="6" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="miscdiagram_SJRMSpBDt_23dyQ8eQTulz">
-                    <mxGeometry y="1" width="48" height="47" as="geometry"/>
-                </mxCell>
-                <UserObject placeholders="1" label="MongoDB" Icon-Name="default" id="miscdiagram_SJRMSpBDt_33dyQ8eQEKWY">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pn;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1" parent="1" vertex="1">
-                        <mxGeometry x="103" y="1057" width="48" height="48" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <mxCell id="3" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/data/enterprise_data.svg;" parent="miscdiagram_SJRMSpBDt_33dyQ8eQEKWY" vertex="1">
-                    <mxGeometry x="1" y="1" width="47" height="47" as="geometry"/>
-                </mxCell>
-                <UserObject placeholders="1" label="Git Repo" Icon-Name="archive" id="miscdiagram_SJRMSpBDt_43dyQ8eQdAwW">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1" parent="1" vertex="1">
-                        <mxGeometry x="43" y="1057" width="48" height="48" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <mxCell id="miscdiagram_SJRMSpBDt_53dyQ8eQIuOo" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.1;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="miscdiagram_SJRMSpBDt_43dyQ8eQdAwW" target="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="miscdiagram_SJRMSpBDt_63dyQ8eQAOOI" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.4;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="miscdiagram_SJRMSpBDt_33dyQ8eQEKWY" target="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="miscdiagram_SJRMSpBDt_73dyQ8eQbeFv" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="miscdiagram_SJRMSpBDt_23dyQ8eQTulz" target="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <UserObject placeholders="1" label="64 Gi RWX Storage" Icon-Name="block-storage--alt" _id="userobject_3apRMGWoN5A" id="miscdiagram_SJRMSpBDt_83dyQ8eQoO37">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1;labelWidth=71;" parent="1" vertex="1">
-                        <mxGeometry x="422" y="1057" width="48" height="48" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <mxCell id="7" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="miscdiagram_SJRMSpBDt_83dyQ8eQoO37">
-                    <mxGeometry y="1" width="48" height="47" as="geometry"/>
-                </mxCell>
-                <UserObject placeholders="1" label="MongoDB" Icon-Name="default" _id="userobject_3apRMGWWkxc" id="miscdiagram_SJRMSpBDt_93dyQ8eQgXHt">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pn;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1" parent="1" vertex="1">
-                        <mxGeometry x="337" y="1057" width="48" height="48" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <mxCell id="4" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/data/enterprise_data.svg;" parent="miscdiagram_SJRMSpBDt_93dyQ8eQgXHt" vertex="1">
-                    <mxGeometry y="1" width="47" height="47" as="geometry"/>
-                </mxCell>
-                <mxCell id="miscdiagram_SJRMSpBDt_103dyQ8eQmP31" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.3;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="miscdiagram_SJRMSpBDt_93dyQ8eQgXHt" target="miscdiagram_SJRMSpBDt_303dyQ8eQ5Lpj" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="miscdiagram_SJRMSpBDt_113dyQ8eQbuem" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.668;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="miscdiagram_SJRMSpBDt_83dyQ8eQoO37" target="miscdiagram_SJRMSpBDt_303dyQ8eQ5Lpj" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <UserObject placeholders="1" label="64 Gi RWX Storage" Icon-Name="block-storage--alt" _id="userobject_3apSc9KiG1i" id="miscdiagram_SJRMSpBDt_123dyQ8eQMgog">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1;labelWidth=71;" parent="1" vertex="1">
-                        <mxGeometry x="713" y="920" width="48" height="48" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <mxCell id="8" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="miscdiagram_SJRMSpBDt_123dyQ8eQMgog">
-                    <mxGeometry x="-1" y="1" width="48" height="47" as="geometry"/>
-                </mxCell>
-                <UserObject placeholders="1" label="MongoDB" Icon-Name="default" _id="userobject_3apSc9Kx78s" id="miscdiagram_SJRMSpBDt_133dyQ8eQyiKo">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pn;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1" parent="1" vertex="1">
-                        <mxGeometry x="630" y="920" width="48" height="48" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <mxCell id="5" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/data/enterprise_data.svg;" parent="miscdiagram_SJRMSpBDt_133dyQ8eQyiKo" vertex="1">
-                    <mxGeometry x="1" y="1" width="47" height="47" as="geometry"/>
-                </mxCell>
-                <mxCell id="miscdiagram_SJRMSpBDt_143dyQ8eQigQQ" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.3;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="miscdiagram_SJRMSpBDt_133dyQ8eQyiKo" target="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="miscdiagram_SJRMSpBDt_153dyQ8eQfI1h" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="miscdiagram_SJRMSpBDt_123dyQ8eQMgog" target="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <UserObject placeholders="1" label="&lt;span style=&quot;font-family: &amp;#34;ibm plex sans&amp;#34;&quot;&gt;OpenShift 4.7-4.8 Non-Prod Cluster&lt;/span&gt;" Icon-Name="logo--openshift" id="miscdiagram_SJRMSpBDt_163dyQ8eQu5H7">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;strokeWidth=1;html=1;whiteSpace=wrap;metaEdit=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans SmBld;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=16;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;" parent="1" vertex="1">
-                        <mxGeometry x="24" y="16" width="524" height="1016" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Test/QA/Stage Namespace" Icon-Name="border--none" _id="userobject_364sGXJ9f9r" id="miscdiagram_SJRMSpBDt_303dyQ8eQ5Lpj">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_163dyQ8eQu5H7" vertex="1">
-                        <mxGeometry x="276" y="47" width="232" height="792" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Worker Node" Icon-Name="cloud-services" _id="userobject_364sGXJiiUp" id="miscdiagram_SJRMSpBDt_313dyQ8eQJH4q">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=blue;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_303dyQ8eQ5Lpj" vertex="1">
-                        <mxGeometry x="16" y="56" width="184" height="712" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Project Deployment" Icon-Name="cube" _id="userobject_3apQcVnC9td" id="miscdiagram_SJRMSpBDt_323dyQ8eQrwTu">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_313dyQ8eQJH4q" vertex="1">
-                        <mxGeometry x="16" y="48" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Viewer" Icon-Name="cube" _id="userobject_3apQcVnudOW" id="miscdiagram_SJRMSpBDt_333dyQ8eQ8mIS">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_313dyQ8eQJH4q" vertex="1">
-                        <mxGeometry x="16" y="120" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Analyzer" Icon-Name="cube" _id="userobject_3apQcVoLvL0" id="miscdiagram_SJRMSpBDt_343dyQ8eQotst">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_313dyQ8eQJH4q" vertex="1">
-                        <mxGeometry x="16" y="192" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Platform Engine" Icon-Name="cube" _id="userobject_3apQcVomBbM" id="miscdiagram_SJRMSpBDt_353dyQ8eQ6K8t">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_313dyQ8eQJH4q" vertex="1">
-                        <mxGeometry x="16" y="270" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="GraphQL" Icon-Name="cube" _id="userobject_3apQcVon9XT" id="miscdiagram_SJRMSpBDt_363dyQ8eQAEFn">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_313dyQ8eQJH4q" vertex="1">
-                        <mxGeometry x="16" y="344" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="External Share (opt)" Icon-Name="cube" _id="userobject_3apQcVoJ0Qn" id="miscdiagram_SJRMSpBDt_373dyQ8eQenhk">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_313dyQ8eQJH4q" vertex="1">
-                        <mxGeometry x="16" y="416" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Search Services (opt)" Icon-Name="cube" _id="userobject_3apQcVow3PO" id="miscdiagram_SJRMSpBDt_383dyQ8eQVVRo">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_313dyQ8eQJH4q" vertex="1">
-                        <mxGeometry x="16" y="488" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="CMIS (opt)" Icon-Name="cube" _id="userobject_3apQcVo5M7j" id="miscdiagram_SJRMSpBDt_393dyQ8eQqXN5">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_313dyQ8eQJH4q" vertex="1">
-                        <mxGeometry x="16" y="560" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Task Manager (opt)" Icon-Name="cube" _id="userobject_3apQcVo7I2g" id="miscdiagram_SJRMSpBDt_403dyQ8eQWRrk">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_313dyQ8eQJH4q" vertex="1">
-                        <mxGeometry x="16" y="632" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Dev Namespace" Icon-Name="border--none" id="miscdiagram_SJRMSpBDt_173dyQ8eQpiRh">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="miscdiagram_SJRMSpBDt_163dyQ8eQu5H7" vertex="1">
-                        <mxGeometry x="16" y="47" width="232" height="944" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Worker Node" Icon-Name="cloud-services" id="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=blue;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_173dyQ8eQpiRh" vertex="1">
-                        <mxGeometry x="11" y="30" width="200" height="875" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Document Processing Designer" Icon-Name="cube" _id="userobject_3667dpUiJf2" id="miscdiagram_SJRMSpBDt_193dyQ8eQT9q7">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="51" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Document Processing Deployment" Icon-Name="cube" _id="userobject_3667mdD737Q" id="miscdiagram_SJRMSpBDt_203dyQ8eQCKjT">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="123" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Git Common Gateway" Icon-Name="cube" _id="userobject_3667Aq2Y8bL" id="miscdiagram_SJRMSpBDt_213dyQ8eQbRYQ">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="787" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Viewer" Icon-Name="cube" _id="userobject_3apN7eYAaAO" id="miscdiagram_SJRMSpBDt_223dyQ8eQWTr5">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="195" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Analyzer" Icon-Name="cube" _id="userobject_3apNd4qO9rA" id="miscdiagram_SJRMSpBDt_233dyQ8eQE3j8">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="267" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Platform Engine" Icon-Name="cube" _id="userobject_3apNjEzNnwo" id="miscdiagram_SJRMSpBDt_243dyQ8eQ2AbW">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="339" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="GraphQL" Icon-Name="cube" _id="userobject_3apNpGCXvwk" id="miscdiagram_SJRMSpBDt_253dyQ8eQVPTH">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="411" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="External Share (opt)" Icon-Name="cube" _id="userobject_3apNDbg02Tk" id="miscdiagram_SJRMSpBDt_263dyQ8eQOiID">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="483" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Search Services (opt)" Icon-Name="cube" _id="userobject_3apNN4nt17V" id="miscdiagram_SJRMSpBDt_273dyQ8eQz4eQ">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="555" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="CMIS (opt)" Icon-Name="cube" _id="userobject_3apO7n0D6iU" id="miscdiagram_SJRMSpBDt_283dyQ8eQOJiT">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="630" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Task Manager (opt)" Icon-Name="cube" _id="userobject_3apOczW1pgS" id="miscdiagram_SJRMSpBDt_293dyQ8eQ3k7Z">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_183dyQ8eQNOLR" vertex="1">
-                        <mxGeometry x="20" y="707" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="&lt;span style=&quot;font-family: &amp;#34;ibm plex sans&amp;#34;&quot;&gt;OpenShift 4.7-4.8 Prod Cluster&lt;/span&gt;" Icon-Name="logo--openshift" _id="userobject_3dwCAeXCcHW" id="miscdiagram_SJRMSpBDt_413dyQ8eQ62re">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;strokeWidth=1;html=1;whiteSpace=wrap;metaEdit=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans SmBld;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=16;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="1" vertex="1">
-                        <mxGeometry x="560" y="16" width="264" height="864" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Prod Namespace" Icon-Name="border--none" _id="userobject_365Ft8IL3wn" id="miscdiagram_SJRMSpBDt_423dyQ8eQjcnb">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_413dyQ8eQ62re" vertex="1">
-                        <mxGeometry x="22" y="48" width="216" height="792" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Worker Node" Icon-Name="cloud-services" _id="userobject_3apS309pqmU" id="miscdiagram_SJRMSpBDt_433dyQ8eQ85li">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=blue;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_423dyQ8eQjcnb" vertex="1">
-                        <mxGeometry x="16" y="52" width="184" height="712" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Project Deployment" Icon-Name="cube" _id="userobject_3apS309Lsbz" id="miscdiagram_SJRMSpBDt_443dyQ8eQN78J">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" vertex="1">
-                        <mxGeometry x="16" y="48" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Viewer" Icon-Name="cube" _id="userobject_3apS309089J" id="miscdiagram_SJRMSpBDt_453dyQ8eQnqsw">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" vertex="1">
-                        <mxGeometry x="16" y="120" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Analyzer" Icon-Name="cube" _id="userobject_3apS309RkQX" id="miscdiagram_SJRMSpBDt_463dyQ8eQjedp">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" vertex="1">
-                        <mxGeometry x="16" y="192" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Platform Engine" Icon-Name="cube" _id="userobject_3apS30956VR" id="miscdiagram_SJRMSpBDt_473dyQ8eQzqak">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" vertex="1">
-                        <mxGeometry x="16" y="270" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="GraphQL" Icon-Name="cube" _id="userobject_3apS309bTbl" id="miscdiagram_SJRMSpBDt_483dyQ8eQM2LD">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" vertex="1">
-                        <mxGeometry x="16" y="344" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="External Share (opt)" Icon-Name="cube" _id="userobject_3apS30aB88y" id="miscdiagram_SJRMSpBDt_493dyQ8eQeAsV">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" vertex="1">
-                        <mxGeometry x="16" y="416" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Content Search Services (opt)" Icon-Name="cube" _id="userobject_3apS30abRga" id="miscdiagram_SJRMSpBDt_503dyQ8eQ2CJ9">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" vertex="1">
-                        <mxGeometry x="16" y="488" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="CMIS (opt)" Icon-Name="cube" _id="userobject_3apS30aYzSy" id="miscdiagram_SJRMSpBDt_513dyQ8eQcYo5">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" vertex="1">
-                        <mxGeometry x="16" y="560" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject placeholders="1" label="Task Manager (opt)" Icon-Name="cube" _id="userobject_3apS30aGzPr" id="miscdiagram_SJRMSpBDt_523dyQ8eQ7RZ0">
-                    <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1" parent="miscdiagram_SJRMSpBDt_433dyQ8eQ85li" vertex="1">
-                        <mxGeometry x="16" y="632" width="152" height="64" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <mxCell id="2" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/devops/configuration_management.svg;" parent="1" vertex="1">
-                    <mxGeometry x="43" y="1058" width="47" height="47" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram id="Tr5ceSvcylgi-qd9AIuI" name="Page-1">
+    <mxGraphModel dx="2991" dy="2485" grid="1" gridSize="8" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <MiscDiagram modelType="MiscDiagram" lastModifiedUserId="dbush@ibm.com" description="" lastModified="2022-01-26T00:14:24Z" _id="miscdiagram_B1j_SJlOt" label="DO Automation Document Processing on OCP" id="0">
+          <mxCell />
+        </MiscDiagram>
+        <mxCell id="1" parent="0" />
+        <UserObject placeholders="1" label="Postgres EDB/External Postgres" Icon-Name="default" id="miscdiagram_B1j_SJlOt_33dyR8UQeAwW">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pn;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="200" y="784" width="48" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Git Repo" Icon-Name="archive" id="miscdiagram_B1j_SJlOt_43dyR8UQgxDn">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="104" y="784" width="48" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="CA DB (DB2/PG)" Icon-Name="data--base" id="miscdiagram_B1j_SJlOt_53dyR8UQ9l7k">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="336" y="784" width="48" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="BTS DB" Icon-Name="data--base" _id="userobject_36P5vDl5987" id="miscdiagram_B1j_SJlOt_93dyR8UQx7J3">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="412" y="784" width="48" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="LDAP" Icon-Name="data--base" _id="userobject_36P5Kby7Kat" id="miscdiagram_B1j_SJlOt_113dyR8UQoE4f">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="480" y="784" width="48" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="&lt;span style=&quot;font-family: &amp;quot;ibm plex sans&amp;quot;&quot;&gt;OpenShift 4.7-4.8 Non-Prod Cluster&lt;/span&gt;" Icon-Name="logo--openshift" id="miscdiagram_B1j_SJlOt_223dyR8UQknNh">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;strokeWidth=1;html=1;whiteSpace=wrap;metaEdit=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans SmBld;fontColor=#000000;fontSize=14;image=;verticalAlign=bottom;align=center;spacing=0;spacingLeft=16;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;labelPosition=center;verticalLabelPosition=top;labelBackgroundColor=none;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="56" y="-32" width="952" height="728" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Authoring Namespace" Icon-Name="border--none" id="miscdiagram_B1j_SJlOt_233dyR8UQaYAk">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=bottom;align=center;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;labelPosition=center;verticalLabelPosition=top;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_223dyR8UQknNh" vertex="1">
+            <mxGeometry x="32" y="168" width="880" height="512" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Business Automation Studio" Icon-Name="cube" _id="userobject_36P1Ee38pfG" id="miscdiagram_B1j_SJlOt_243dyR8UQWRlB">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="18" y="52" width="152" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Content Designer" Icon-Name="cube" _id="userobject_3667dpUiJf2" id="miscdiagram_B1j_SJlOt_253dyR8UQdbGD">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="18" y="148" width="152" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Git Common Gateway" Icon-Name="cube" _id="userobject_3667Aq2Y8bL" id="miscdiagram_B1j_SJlOt_263dyR8UQSVPM">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;strokeColor=#000000;fillColor=none;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="18" y="348" width="152" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Content Analyzer Service" Icon-Name="cube" _id="userobject_36P25ugMZ5Y" id="miscdiagram_B1j_SJlOt_273dyR8UQ8cT9">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="198" y="240" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Deployment Service" Icon-Name="cube" _id="userobject_3667mdD737Q" id="miscdiagram_B1j_SJlOt_283dyR8UQOgOF">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="186" y="148" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Document Processing Designer" Icon-Name="cube" _id="userobject_36P1QYD0zJA" id="miscdiagram_B1j_SJlOt_293dyR8UQvOCA">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="186" y="52" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="BTS Teams UI" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="miscdiagram_B1j_SJlOt_303dyR8UQFwSX">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;strokeColor=#000000;fillColor=none;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="350" y="52" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="BTS" Icon-Name="cube" _id="userobject_36OWko64QQ0" id="miscdiagram_B1j_SJlOt_313dyR8UQ7wGu">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="310" y="348" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="CPE" Icon-Name="cube" _id="userobject_36P78EL8A8f" id="miscdiagram_B1j_SJlOt_323dyR8UQu4Fc">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="488" y="348" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Application Engine" Icon-Name="cube" _id="userobject_36P65RDvgS0" id="miscdiagram_B1j_SJlOt_333dyR8UQqFrO">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="526" y="140" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Business Automation App Designer" Icon-Name="cube" _id="userobject_36P6hJfFbg5" id="miscdiagram_B1j_SJlOt_343dyR8UQKq7G">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;strokeColor=#000000;fillColor=none;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="518" y="52" width="160" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="ViewOne Service" Icon-Name="cube" _id="userobject_36P6KZM3n5F" id="miscdiagram_B1j_SJlOt_353dyR8UQ52sK">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="720" y="140" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="GraphQL" Icon-Name="cube" _id="userobject_36P6XDoOzQz" id="miscdiagram_B1j_SJlOt_363dyR8UQkNWK">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" vertex="1">
+            <mxGeometry x="678" y="348" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="miscdiagram_B1j_SJlOt_373dyR8UQWdO4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_243dyR8UQWRlB" target="miscdiagram_B1j_SJlOt_253dyR8UQdbGD" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_383dyR8UQiYC1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_253dyR8UQdbGD" target="miscdiagram_B1j_SJlOt_263dyR8UQSVPM" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_393dyR8UQGBuM" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_283dyR8UQOgOF" target="miscdiagram_B1j_SJlOt_253dyR8UQdbGD" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_403dyR8UQaDyu" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_243dyR8UQWRlB" target="miscdiagram_B1j_SJlOt_293dyR8UQvOCA" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_413dyR8UQjqBR" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_293dyR8UQvOCA" target="miscdiagram_B1j_SJlOt_283dyR8UQOgOF" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_433dyR8UQRlHU" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.678;entryY=0.006;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.398;exitY=1.008;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_303dyR8UQFwSX" target="miscdiagram_B1j_SJlOt_313dyR8UQ7wGu" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="407" y="336" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="407" y="168" />
+              <mxPoint x="408" y="168" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_443dyR8UQL97q" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_283dyR8UQOgOF" target="miscdiagram_B1j_SJlOt_323dyR8UQu4Fc" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="512" y="180" />
+              <mxPoint x="512" y="304" />
+              <mxPoint x="560" y="304" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_453dyR8UQbBjg" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_323dyR8UQu4Fc" target="miscdiagram_B1j_SJlOt_313dyR8UQ7wGu" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_463dyR8UQHbcD" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_333dyR8UQqFrO" target="miscdiagram_B1j_SJlOt_273dyR8UQ8cT9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="584" y="272" />
+            </Array>
+            <mxPoint x="344" y="272" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_473dyR8UQUaPQ" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_343dyR8UQKq7G" target="miscdiagram_B1j_SJlOt_333dyR8UQqFrO" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_493dyR8UQmQN6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_363dyR8UQkNWK" target="miscdiagram_B1j_SJlOt_323dyR8UQu4Fc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_503dyR8UQsR0V" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="752" y="204" as="sourcePoint" />
+            <mxPoint x="752" y="348" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="752" y="204" />
+              <mxPoint x="752" y="348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_283dyR8UQOgOF" target="miscdiagram_B1j_SJlOt_313dyR8UQ7wGu" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="258" y="224" />
+              <mxPoint x="384" y="224" />
+            </Array>
+            <mxPoint x="360" y="288" as="sourcePoint" />
+            <mxPoint x="471" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-50" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_253dyR8UQdbGD" target="miscdiagram_B1j_SJlOt_273dyR8UQ8cT9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="144" y="272" as="sourcePoint" />
+            <mxPoint x="144" y="408" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-54" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_233dyR8UQaYAk" source="miscdiagram_B1j_SJlOt_333dyR8UQqFrO" target="miscdiagram_B1j_SJlOt_353dyR8UQ52sK" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="232" as="sourcePoint" />
+            <mxPoint x="680" y="376" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="172" />
+              <mxPoint x="680" y="172" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject placeholders="1" label="ZEN Route" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="LW49VV2SgWv3rmbio3-E-16">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_223dyR8UQknNh" vertex="1">
+            <mxGeometry x="672" y="-24" width="128" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="IAM Route" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="LW49VV2SgWv3rmbio3-E-15">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_223dyR8UQknNh" vertex="1">
+            <mxGeometry x="112" y="-24" width="120" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="IAM" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="LW49VV2SgWv3rmbio3-E-21">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_223dyR8UQknNh" vertex="1">
+            <mxGeometry x="288" y="32" width="120" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Zen Frontdoor" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="LW49VV2SgWv3rmbio3-E-22">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_223dyR8UQknNh" vertex="1">
+            <mxGeometry x="504" y="32" width="120" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_223dyR8UQknNh" source="LW49VV2SgWv3rmbio3-E-15" target="LW49VV2SgWv3rmbio3-E-21" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="176" y="56" as="sourcePoint" />
+            <mxPoint x="177" y="286" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="172" y="56" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-25" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_223dyR8UQknNh" source="LW49VV2SgWv3rmbio3-E-16" target="LW49VV2SgWv3rmbio3-E-22" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="616" y="32" as="sourcePoint" />
+            <mxPoint x="732" y="64" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="744" y="56" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-26" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_223dyR8UQknNh" source="LW49VV2SgWv3rmbio3-E-21" target="LW49VV2SgWv3rmbio3-E-22" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="416" y="106" as="sourcePoint" />
+            <mxPoint x="466" y="56" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-27" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" parent="miscdiagram_B1j_SJlOt_223dyR8UQknNh" source="LW49VV2SgWv3rmbio3-E-22" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="586.24" y="77.44" as="sourcePoint" />
+            <mxPoint x="564" y="168" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="564" y="168" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;exitX=0.775;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="miscdiagram_B1j_SJlOt_263dyR8UQSVPM" target="miscdiagram_B1j_SJlOt_33dyR8UQeAwW" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="224" y="552" as="sourcePoint" />
+            <mxPoint x="159.73000000000002" y="696" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_63dyR8UQrt6Q" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.516;exitY=0.99;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" parent="1" source="miscdiagram_B1j_SJlOt_273dyR8UQ8cT9" target="miscdiagram_B1j_SJlOt_53dyR8UQ9l7k" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_103dyR8UQRtig" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="miscdiagram_B1j_SJlOt_313dyR8UQ7wGu" target="miscdiagram_B1j_SJlOt_93dyR8UQx7J3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="736" />
+              <mxPoint x="436" y="736" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_123dyR8UQhDda" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="miscdiagram_B1j_SJlOt_313dyR8UQ7wGu" target="miscdiagram_B1j_SJlOt_113dyR8UQoE4f" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="736" />
+              <mxPoint x="504" y="736" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject placeholders="1" label="UI - Browser" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="LW49VV2SgWv3rmbio3-E-13">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="460" y="-216" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="BTS DB" Icon-Name="data--base" _id="userobject_36PbA5H3Lvp" id="miscdiagram_B1j_SJlOt_143dyR8UQvNq0">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=0;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="1080" y="784" width="48" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="LDAP" Icon-Name="data--base" _id="userobject_36PbChgNqlr" id="miscdiagram_B1j_SJlOt_153dyR8UQy11h">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=0;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="1192" y="784" width="48" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="CA DB (DB2/PG)" Icon-Name="data--base" _id="userobject_36PbEIjMhDf" id="miscdiagram_B1j_SJlOt_163dyR8UQTwJt">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=0;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="1352" y="784" width="48" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="OS DB (DB2/PG)" Icon-Name="data--base" _id="userobject_36PcceQ84pQ" id="miscdiagram_B1j_SJlOt_203dyR8UQnikP">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=0;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="1493" y="784" width="48" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="&lt;span style=&quot;font-family: &amp;#34;ibm plex sans&amp;#34;&quot;&gt;OpenShift 4.7-4.8 Prod Cluster&lt;/span&gt;" Icon-Name="logo--openshift" id="miscdiagram_B1j_SJlOt_513dyR8UQyjKj">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=pg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;strokeWidth=1;html=1;whiteSpace=wrap;metaEdit=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans SmBld;fontColor=#000000;fontSize=14;image=;verticalAlign=bottom;align=center;spacing=0;spacingLeft=16;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;labelPosition=center;verticalLabelPosition=top;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="1040" y="-32" width="616" height="754" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;exitX=0.145;exitY=0.995;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="miscdiagram_B1j_SJlOt_263dyR8UQSVPM" target="miscdiagram_B1j_SJlOt_43dyR8UQgxDn" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="128" y="784" />
+            </Array>
+            <mxPoint x="96" y="442" as="sourcePoint" />
+            <mxPoint x="96" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-19" value="" style="group;fillColor=none;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="1060" y="142" width="576" height="544" as="geometry" />
+        </mxCell>
+        <UserObject placeholders="1" label="Prod Namespace" Icon-Name="border--none" _id="userobject_365Ft8IL3wn" id="miscdiagram_B1j_SJlOt_523dyR8UQNp1R">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=bottom;align=center;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;labelPosition=center;verticalLabelPosition=top;fillColor=none;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" vertex="1">
+            <mxGeometry width="576" height="544" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="CI/CD Deployment" Icon-Name="cube" _id="userobject_366DO4qoXqF" id="miscdiagram_B1j_SJlOt_533dyR8UQ0ANk">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;fillColor=none;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" vertex="1">
+            <mxGeometry x="24" y="18" width="145" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Business Automation Navigator" Icon-Name="cube" _id="userobject_36PaJ0GuBQ8" id="miscdiagram_B1j_SJlOt_543dyR8UQ3KkY">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;fillColor=none;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" vertex="1">
+            <mxGeometry x="185" y="18" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Application Engine" Icon-Name="cube" _id="userobject_36PaF0EsXTF" id="miscdiagram_B1j_SJlOt_553dyR8UQn4V8">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;strokeColor=#000000;fillColor=none;" parent="LW49VV2SgWv3rmbio3-E-19" vertex="1">
+            <mxGeometry x="185" y="114" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Deployment Service" Icon-Name="cube" _id="userobject_36Pax4GzTqo" id="miscdiagram_B1j_SJlOt_563dyR8UQNd9C">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;fillColor=none;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" vertex="1">
+            <mxGeometry x="24" y="114" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="BTS" Icon-Name="cube" _id="userobject_366DO4ri27P" id="miscdiagram_B1j_SJlOt_573dyR8UQUmuE">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;fillColor=none;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" vertex="1">
+            <mxGeometry x="20" y="226" width="152" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="ViewOne Service" Icon-Name="cube" _id="userobject_36PaRVQhEr2" id="miscdiagram_B1j_SJlOt_583dyR8UQDez9">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;fillColor=none;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" vertex="1">
+            <mxGeometry x="209" y="306" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="GraphQL" Icon-Name="cube" _id="userobject_36PaVbv4a5x" id="miscdiagram_B1j_SJlOt_593dyR8UQr5lZ">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;fillColor=none;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" vertex="1">
+            <mxGeometry x="385" y="306" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="CPE" Icon-Name="cube" _id="userobject_36Pb6mAavoH" id="miscdiagram_B1j_SJlOt_603dyR8UQSTKk">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;fillColor=none;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" vertex="1">
+            <mxGeometry x="385" y="410" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Content Analyzer Service" Icon-Name="cube" _id="userobject_36Pb4qC6c3a" id="miscdiagram_B1j_SJlOt_613dyR8UQVZmL">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=0;fillColor=none;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" vertex="1">
+            <mxGeometry x="113" y="394" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="miscdiagram_B1j_SJlOt_623dyR8UQSyaa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" source="miscdiagram_B1j_SJlOt_543dyR8UQ3KkY" target="miscdiagram_B1j_SJlOt_553dyR8UQn4V8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_633dyR8UQFLMH" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" source="miscdiagram_B1j_SJlOt_533dyR8UQ0ANk" target="miscdiagram_B1j_SJlOt_563dyR8UQNd9C" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_643dyR8URfvrv" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" source="miscdiagram_B1j_SJlOt_563dyR8UQNd9C" target="miscdiagram_B1j_SJlOt_573dyR8UQUmuE" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_653dyR8URpJMf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" source="miscdiagram_B1j_SJlOt_553dyR8UQn4V8" target="miscdiagram_B1j_SJlOt_583dyR8UQDez9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_663dyR8URQRzS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" source="miscdiagram_B1j_SJlOt_583dyR8UQDez9" target="miscdiagram_B1j_SJlOt_593dyR8UQr5lZ" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_673dyR8URBmS6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" source="miscdiagram_B1j_SJlOt_593dyR8UQr5lZ" target="miscdiagram_B1j_SJlOt_603dyR8UQSTKk" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_683dyR8UREtCG" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;strokeColor=#000000;" parent="LW49VV2SgWv3rmbio3-E-19" source="miscdiagram_B1j_SJlOt_553dyR8UQn4V8" target="miscdiagram_B1j_SJlOt_613dyR8UQVZmL" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_193dyR8UQz0Zk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="1" source="miscdiagram_B1j_SJlOt_573dyR8UQUmuE" target="miscdiagram_B1j_SJlOt_143dyR8UQvNq0" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1104" y="544" />
+              <mxPoint x="1104" y="544" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_183dyR8UQrkU1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="miscdiagram_B1j_SJlOt_573dyR8UQUmuE" target="miscdiagram_B1j_SJlOt_153dyR8UQy11h" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1144" y="674" />
+              <mxPoint x="1216" y="674" />
+            </Array>
+            <mxPoint x="1216" y="738" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_173dyR8UQvVMZ" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="1" source="miscdiagram_B1j_SJlOt_613dyR8UQVZmL" target="miscdiagram_B1j_SJlOt_163dyR8UQTwJt" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="miscdiagram_B1j_SJlOt_213dyR8UQIoTl" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" parent="1" source="miscdiagram_B1j_SJlOt_603dyR8UQSTKk" target="miscdiagram_B1j_SJlOt_203dyR8UQnikP" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1517" y="578" as="sourcePoint" />
+            <mxPoint x="1516.94" y="721.99" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject placeholders="1" label="IAM Route" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="LW49VV2SgWv3rmbio3-E-28">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="1088" y="-56" width="120" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="ZEN Route" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="LW49VV2SgWv3rmbio3-E-29">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="1493" y="-56" width="128" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="IAM" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="LW49VV2SgWv3rmbio3-E-30">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="1200" y="8" width="120" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject placeholders="1" label="Zen Frontdoor" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="LW49VV2SgWv3rmbio3-E-31">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="1408" y="8" width="120" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-32" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" parent="1" source="LW49VV2SgWv3rmbio3-E-28" target="LW49VV2SgWv3rmbio3-E-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1104" as="sourcePoint" />
+            <mxPoint x="1109" y="262" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1148" y="32" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-33" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" target="LW49VV2SgWv3rmbio3-E-31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="-8" as="sourcePoint" />
+            <mxPoint x="1664" y="40" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1560" y="-8" />
+              <mxPoint x="1560" y="32" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-34" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#000000;" parent="1" source="LW49VV2SgWv3rmbio3-E-30" target="LW49VV2SgWv3rmbio3-E-31" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1348" y="82" as="sourcePoint" />
+            <mxPoint x="1398" y="32" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-37" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.714;entryY=0;entryDx=0;entryDy=0;exitX=0.533;exitY=1.002;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;strokeColor=#000000;" parent="1" source="LW49VV2SgWv3rmbio3-E-31" target="miscdiagram_B1j_SJlOt_523dyR8UQNp1R" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1504" y="72" as="sourcePoint" />
+            <mxPoint x="1472" y="112" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1471" y="56" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-43" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="LW49VV2SgWv3rmbio3-E-13" target="LW49VV2SgWv3rmbio3-E-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="456" y="-176" as="sourcePoint" />
+            <mxPoint x="456" y="-88" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="532" y="-112" />
+              <mxPoint x="228" y="-112" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-44" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="LW49VV2SgWv3rmbio3-E-13" target="LW49VV2SgWv3rmbio3-E-16" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="544" y="-184" as="sourcePoint" />
+            <mxPoint x="544" y="-96" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="532" y="-112" />
+              <mxPoint x="792" y="-112" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject placeholders="1" label="UI - Browser" Icon-Name="cube" _id="userobject_36P4Vl50sWv" id="LW49VV2SgWv3rmbio3-E-47">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=lg;shapeLayout=expanded;colorFamily=green;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=middle;align=left;spacing=0;spacingLeft=12;spacingRight=16;spacingTop=0;spacingBottom=0;container=1;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="1304" y="-216" width="144" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-48" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="LW49VV2SgWv3rmbio3-E-47" target="LW49VV2SgWv3rmbio3-E-28" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1322" y="-216" as="sourcePoint" />
+            <mxPoint x="1094" y="-96" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1376" y="-112" />
+              <mxPoint x="1148" y="-112" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-49" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="LW49VV2SgWv3rmbio3-E-47" target="LW49VV2SgWv3rmbio3-E-29" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1410" y="-224" as="sourcePoint" />
+            <mxPoint x="1658" y="-96" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1376" y="-112" />
+              <mxPoint x="1557" y="-112" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject placeholders="1" label="OS DB (DB2/PG)" Icon-Name="data--base" _id="userobject_36PcceQ84pQ" id="LW49VV2SgWv3rmbio3-E-51">
+          <mxCell style="shape=mxgraph.ibm2mondrian.base;shapeType=ln;shapeLayout=collapsed;colorFamily=cyan;colorBackground=noColor:noColor;html=1;whiteSpace=wrap;metaEdit=1;strokeWidth=1;collapsible=0;recursiveResize=0;expand=0;fontFamily=IBM Plex Sans;fontColor=#000000;fontSize=14;image=;verticalAlign=top;align=center;spacing=0;spacingLeft=0;spacingRight=0;spacingTop=0;spacingBottom=0;verticalLabelPosition=bottom;labelPosition=center;positionText=bottom;container=0;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+            <mxGeometry x="624" y="784" width="48" height="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="LW49VV2SgWv3rmbio3-E-53" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" parent="1" source="miscdiagram_B1j_SJlOt_323dyR8UQu4Fc" target="LW49VV2SgWv3rmbio3-E-51" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="392" y="608" as="sourcePoint" />
+            <mxPoint x="352" y="953" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
 </mxfile>
